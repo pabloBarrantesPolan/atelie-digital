@@ -1,0 +1,5 @@
+<root>
+    <item name='org.hibernate.hql.internal.NameGenerator'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
