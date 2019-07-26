@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @Api
-@RequestMapping(value = "/api/v1/cliente", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/api/v1/clientes", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class ClienteController {
 
     private static final Logger logger = LoggerFactory.getLogger(ClienteController.class);
