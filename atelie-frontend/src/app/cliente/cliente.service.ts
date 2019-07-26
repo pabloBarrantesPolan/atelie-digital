@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class ClienteService {
 
-  private baseUrl = 'http://localhost:8081/api/v1/cliente';
+  private baseUrl = 'http://localhost:8081/api/v1/clientes';
 
   constructor(private http: HttpClient) { }
 
   getClientes(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}/`);
   }
 
   getCliente(id: number): Observable<any> {
@@ -22,7 +22,7 @@ export class ClienteService {
 
   // tslint:disable-next-line: ban-types
   createCliente(cliente: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, cliente);
+    return this.http.post(`${this.baseUrl}/`, cliente);
   }
 
 

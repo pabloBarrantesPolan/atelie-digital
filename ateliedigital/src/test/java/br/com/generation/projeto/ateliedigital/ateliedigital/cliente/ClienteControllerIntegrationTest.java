@@ -31,7 +31,7 @@ public class ClienteControllerIntegrationTest  {
     private int port;
 
     private String getRootUrl(String path){
-        return "http://localhost:" + port + "/api/v1/cliente" + path;
+        return "http://localhost:" + port + "/api/v1/clientes" + path;
     }
 
     @Test
