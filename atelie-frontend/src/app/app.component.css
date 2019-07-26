@@ -1,0 +1,16 @@
+.navContainer{
+  margin-bottom: 15px;
+}
+.titulo{
+  text-align: center;
+  margin: 10% auto;
+}
+.rodape{
+  text-align: center;
+  margin-bottom: 0;
+  padding: 3%;
+  width: 100%;
+  background-color: blue;
+  text-align: center;
+  color: white;
+}

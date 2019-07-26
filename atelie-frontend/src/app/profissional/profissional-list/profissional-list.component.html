@@ -1,1 +1,31 @@
-<p>profissional-list works!</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Profissionais</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome:</th>
+            <th>Email:</th>
+            <th>Telefone:</th>
+            <th>Região:</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let profissional of profissionais | async">
+            <td>{{profissional.nome}}</td>
+            <td>{{profissional.email}}</td>
+            <td>{{profissional.telefone}}</td>
+            <td>{{profissional.regiao}}</td>
+
+            <td>
+              <button (click)="profissionalDetails(profissional.id)" class="btn btn-info btnDetalhe">Detalhes</button>
+            </td>
+          </tr>
+
+        </tbody>
+    </table>
+  </div>
+</div>
