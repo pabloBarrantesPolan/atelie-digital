@@ -34,4 +34,6 @@ export class ClienteService {
   deleteCliente(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, {responseType: 'text'});
   }
+
+  
 }

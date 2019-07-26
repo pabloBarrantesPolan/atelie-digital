@@ -12,12 +12,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @Api
-@RequestMapping(value = "/api/v1/profissional", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/api/v1/profisionais", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@CrossOrigin("*")
 public class ProfissionalController {
 
     @Autowired
@@ -26,7 +28,7 @@ public class ProfissionalController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(value = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiOperation(value = "Salva um novo Profissional")
-    public Profissional Save(@RequestBody Profissional profissional){
+    public Profissional Save(@Valid @RequestBody Profissional profissional){
 
         return repository.save(profissional);
 
@@ -54,6 +56,8 @@ public class ProfissionalController {
             p.setTelefone(profissional.getTelefone());
             p.setCpf(profissional.getCpf());
             p.setRegiao(profissional.getRegiao());
+            p.setSenha(profissional.getSenha());
+            p.setPlano(profissional.getPlano());
             return repository.save(p);
         }).orElseThrow(()->
                 new ResourceNotFoundException("Não existe esse profissional"));
