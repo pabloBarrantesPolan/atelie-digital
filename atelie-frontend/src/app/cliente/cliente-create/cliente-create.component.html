@@ -1,0 +1,24 @@
+<h3>Criar Cliente</h3>
+<div [hidden]="submitted" class="criarCliente">
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" class="form-control" id="nome" required [(ngModel)]="cliente.nome">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" class="form-control" id="email" required [(ngModel)]="cliente.email">
+    </div>
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha" class="form-control" id="senha" required [(ngModel)]="cliente.senha">
+    </div>
+    <button  type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted" class="alert alert-success">
+  <h4 class="">Enviado com sucesso!</h4>
+  <!-- <button class="btn btn-success" (click)="newPessoa()">Adicionar<button> -->
+</div>
