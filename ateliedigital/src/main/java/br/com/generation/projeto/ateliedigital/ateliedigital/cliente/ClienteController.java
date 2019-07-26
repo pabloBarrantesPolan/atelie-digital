@@ -16,6 +16,7 @@ import java.util.Optional;
 @RestController
 @Api
 @RequestMapping(value = "/api/v1/clientes", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@CrossOrigin("*")
 public class ClienteController {
 
     private static final Logger logger = LoggerFactory.getLogger(ClienteController.class);
