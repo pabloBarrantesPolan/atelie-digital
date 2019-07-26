@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -15,23 +15,29 @@ public class Profissional {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
-    @NotBlank
+    @NotNull
     private String nome;
 
-    @NotBlank
+    @NotNull
     @Column(unique = true)
     private String cpf;
 
-    @NotBlank
+    @NotNull
     @Email
     private String email;
 
-    @NotBlank
+    @NotNull
     private Integer telefone;
 
-    @NotBlank
+    @NotNull
     private String  regiao;
 
-    @NotBlank
+    @NotNull
     private String cep;
+
+    @NotNull
+    private String senha;
+
+    @NotNull
+    private  Integer plano;
 }

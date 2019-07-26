@@ -8,6 +8,8 @@ import { ClienteListComponent } from './cliente/cliente-list/cliente-list.compon
 import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfisionalListComponent } from './profisional/profisional-list/profisional-list.component';
+import { ProfissionalListComponent } from './profissional/profissional-list/profissional-list.component';
 
 
 
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     ClienteCreateComponent,
     ClienteDetailComponent,
     ClienteListComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ProfisionalListComponent,
+    ProfissionalListComponent
   ],
   imports: [
     BrowserModule,
