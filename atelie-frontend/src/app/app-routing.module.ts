@@ -5,6 +5,8 @@ import { ClienteListComponent} from './cliente/cliente-list/cliente-list.compone
 import { ClienteCreateComponent} from './cliente/cliente-create/cliente-create.component';
 import { ClienteDetailComponent} from './cliente/cliente-detail/cliente-detail.component';
 import { ProfissionalListComponent } from './profissional/profissional-list/profissional-list.component';
+import { ProfissionalCreateComponent } from './profissional/profissional-create/profissional-create.component';
+import { ProfissionalDetailComponent } from './profissional/profissional-detail/profissional-detail.component';
 
 
 
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'clientes', component: ClienteListComponent},
   {path: 'clientes/adicionar', component: ClienteCreateComponent},
   {path: 'cliente/detalhe/:id', component: ClienteDetailComponent},
-  {path: 'profissionais', component: ProfissionalListComponent}
+  {path: 'profissionais', component: ProfissionalListComponent},
+  {path: 'profissionais/adicionar', component: ProfissionalCreateComponent},
+  {path: 'profissionais/detalhe/:id', component: ProfissionalDetailComponent}
 
 ];
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente, Profissional } from '../profissional';
-import { ClienteService, ProfissionalService } from '../profissional.service';
+import { Profissional } from '../profissional';
+import { ProfissionalService } from '../profissional.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './profissional-create.component.html',
   styleUrls: ['./profissional-create.component.css']
 })
+
 export class ProfissionalCreateComponent implements OnInit {
 
   profissional: Profissional = new Profissional();
@@ -20,28 +21,28 @@ export class ProfissionalCreateComponent implements OnInit {
 
   newPessoa(): void {
     this.submitted = false;
-    this.cliente = new Cliente();
+    this.profissional = new Profissional();
   }
 
   save() {
-    this.clienteService.createCliente(this.cliente)
+    this.profissionalService.createProfissional(this.profissional)
     .subscribe(
       data => console.log(data),
       error => console.log(error)
     );
-    this.cliente = new Cliente();
+    this.profissional = new Profissional();
     this.gotoList();
   }
 
   onSubmit() {
-    console.log(this.cliente);
+    console.log(this.profissional);
     this.submitted = true;
     this.save();
   }
 
   gotoList() {
     setTimeout(() => {
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/profissionais']);
     }, 1500);
 
   }

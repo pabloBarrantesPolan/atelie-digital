@@ -70,7 +70,7 @@ public class ProfissionalController {
         repository.deleteById(id);
     }
 
-    @GetMapping(value = "/{regiao}")
+    @GetMapping(value = "/pesquisa/{regiao}")
     @ApiOperation(value = "filtra por regiao")
     public List<Profissional> findByRegiao(@PathVariable String regiao){
         return  repository.findByRegiao(regiao);

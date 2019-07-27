@@ -9,9 +9,8 @@ import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfissionalListComponent } from './profissional/profissional-list/profissional-list.component';
-import { ProfissioalCreateComponent } from './profissioal-create/profissioal-create.component';
-import { ProfissinalCreateComponent } from './profisional/profissinal-create/profissinal-create.component';
-import { ProfissionalCreateComponent } from './profissional-create/profissional-create.component';
+import { ProfissionalCreateComponent } from './profissional/profissional-create/profissional-create.component';
+import { ProfissionalDetailComponent } from './profissional/profissional-detail/profissional-detail.component';
 
 
 
@@ -23,9 +22,8 @@ import { ProfissionalCreateComponent } from './profissional-create/profissional-
     ClienteListComponent,
     ClienteDeleteComponent,
     ProfissionalListComponent,
-    ProfissioalCreateComponent,
-    ProfissinalCreateComponent,
-    ProfissionalCreateComponent
+    ProfissionalCreateComponent,
+    ProfissionalDetailComponent,
   ],
   imports: [
     BrowserModule,
