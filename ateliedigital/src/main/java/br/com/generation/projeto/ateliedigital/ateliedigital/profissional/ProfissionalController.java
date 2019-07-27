@@ -18,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @Api
-@RequestMapping(value = "/api/v1/profisionais", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/api/v1/profissionais", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @CrossOrigin("*")
 public class ProfissionalController {
 
@@ -70,7 +70,7 @@ public class ProfissionalController {
         repository.deleteById(id);
     }
 
-    @GetMapping(value = "/{regiao}")
+    @GetMapping(value = "/pesquisa/{regiao}")
     @ApiOperation(value = "filtra por regiao")
     public List<Profissional> findByRegiao(@PathVariable String regiao){
         return  repository.findByRegiao(regiao);

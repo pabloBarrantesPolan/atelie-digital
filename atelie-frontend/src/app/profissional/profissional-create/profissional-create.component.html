@@ -1,0 +1,54 @@
+<h3>Cadastro de Profissional</h3>
+<div [hidden]="submitted" class="criarProfissional">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" class="form-control" id="nome" required [(ngModel)]="profissional.nome">
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input type="number" name="cpf" class="form-control" id="cpf" required [(ngModel)]="profissional.cpf">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="number" name="telefone" class="form-control" id="telefone" required [(ngModel)]="profissional.telefone">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="regiao">Região:</label>
+          <input type="text" name="regiao" class="form-control" id="regiao" required [(ngModel)]="profissional.regiao">
+        </div>
+        <div class="form-group">
+          <label for="cep">Cep:</label>
+          <input type="number" name="cep" class="form-control" id="cep" required [(ngModel)]="profissional.cep">
+        </div>
+        <div class="form-group">
+          <label for="plano">Plano:</label>
+          <input type="number" name="plano" class="form-control" id="plano" required [(ngModel)]="profissional.plano">
+        </div>
+      </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" id="email" required [(ngModel)]="profissional.email">
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" class="form-control" id="senha" required [(ngModel)]="profissional.senha">
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <button  type="submit" class="btn btn-success mr-3">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" class="alert alert-success">
+    <h4 class="">Enviado com sucesso!</h4>
+    <!-- <button class="btn btn-success" (click)="newPessoa()">Adicionar<button> -->
+    </div>
