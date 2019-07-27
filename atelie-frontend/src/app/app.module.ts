@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfissionalListComponent } from './profissional/profissional-list/profissional-list.component';
 import { ProfissionalCreateComponent } from './profissional/profissional-create/profissional-create.component';
 import { ProfissionalDetailComponent } from './profissional/profissional-detail/profissional-detail.component';
+import { ProfissionalDeleteComponent } from './profissional/profissional-delete/profissional-delete.component';
 
 
 
@@ -24,6 +25,7 @@ import { ProfissionalDetailComponent } from './profissional/profissional-detail/
     ProfissionalListComponent,
     ProfissionalCreateComponent,
     ProfissionalDetailComponent,
+    ProfissionalDeleteComponent,
   ],
   imports: [
     BrowserModule,
