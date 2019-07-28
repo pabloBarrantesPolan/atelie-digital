@@ -1,0 +1,40 @@
+<h2>Detalhes do Profissional</h2>
+<hr>
+<div *ngIf="empresa">
+  <div class="row">
+    <div class="col">
+
+      <div>
+        <label>
+          <strong>Nome Fantasía: </strong> {{empresa.nomeFantasia}}
+        </label>
+      </div>
+      <div>
+        <label>
+          <strong>Email: </strong> {{empresa.email}}
+        </label>
+      </div>
+      <div>
+          <label>
+            <strong>Telefone: </strong> {{empresa.telefone}}
+          </label>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+            <label>
+              <strong>Região: </strong> {{empresa.regiao}}
+            </label>
+          </div>
+          <div>
+            <label>
+              <strong>Cep: </strong> {{empresa.cep}}
+            </label>
+          </div>
+    </div>
+  </div>
+    <div class="row justify-content-end">
+      <button (click)="list()" class="btn btn-primary mr-3" >Voltar à lista</button>
+    </div>
+</div>
+
