@@ -22,7 +22,7 @@ export class ProfissionalListComponent implements OnInit {
     this.profissionais = this.profissionalService.getProfissionais();
   }
 
-  deleteCliente(id: number) {
+  deleteProfissional(id: number) {
     this.profissionalService.deleteProfissional(id).subscribe(
       data => {
         console.log(data);

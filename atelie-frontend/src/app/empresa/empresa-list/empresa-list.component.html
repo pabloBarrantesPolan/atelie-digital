@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Empresas</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome Fantasía:</th>
+            <th>Email:</th>
+            <th>Telefone:</th>
+            <th>Região:</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empresa of empresas | async">
+            <td>{{empresa.nomeFantasia}}</td>
+            <td>{{empresa.email}}</td>
+            <td>{{empresa.telefone}}</td>
+            <td>{{empresa.regiao}}</td>
+
+            <td>
+              <button (click)="empresaDetails(empresa.id)" class="btn btn-info btnDetalhe">Detalhes</button>
+            </td>
+          </tr>
+
+        </tbody>
+    </table>
+  </div>
+</div>
