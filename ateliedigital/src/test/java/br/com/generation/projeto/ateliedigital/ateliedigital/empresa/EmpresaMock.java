@@ -11,8 +11,8 @@ public class EmpresaMock {
 
 
         Empresa empresa = new Empresa();
-        empresa.setRazaoSocial(faker.name().firstName()+ "SA");
-        empresa.setNomeFantasia(faker.name().firstName());
+        empresa.setRazaoSocial(faker.name().firstName());
+        empresa.setNomeFantasia(faker.name().firstName()+"S.A");
         empresa.setEmail( faker.internet().emailAddress());
         empresa.setTelefone( faker.number().numberBetween(11000000,11999999));
         empresa.setRegiao("Zona leste");

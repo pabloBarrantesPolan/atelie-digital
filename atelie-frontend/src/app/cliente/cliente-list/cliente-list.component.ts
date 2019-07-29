@@ -34,4 +34,7 @@ export class ClienteListComponent implements OnInit {
     this.router.navigate(['cliente/detalhe', id]);
   }
 
+  clienteUpdate(id: number) {
+    this.router.navigate(['cliente/modificar', id]);
+  }
 }
