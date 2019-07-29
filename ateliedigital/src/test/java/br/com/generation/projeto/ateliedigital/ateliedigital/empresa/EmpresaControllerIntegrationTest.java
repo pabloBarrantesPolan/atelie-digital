@@ -1,6 +1,4 @@
-package br.com.generation.projeto.ateliedigital.ateliedigital.cliente;
-
-
+package br.com.generation.projeto.ateliedigital.ateliedigital.empresa;
 
 import br.com.generation.projeto.ateliedigital.ateliedigital.AteliedigitalApplication;
 import org.junit.Test;
@@ -13,16 +11,13 @@ import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.Locale;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = AteliedigitalApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ClienteControllerIntegrationTest  {
+public class EmpresaControllerIntegrationTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
@@ -31,15 +26,15 @@ public class ClienteControllerIntegrationTest  {
     private int port;
 
     private String getRootUrl(String path){
-        return "http://localhost:" + port + "/api/v1/clientes" + path;
+        return "http://localhost:" + port + "/api/v1/empresas" + path;
     }
 
     @Test
     public void save(){
 
         for (int i = 0; i < 10; i++) {
-            ResponseEntity<Cliente> postResponse = testRestTemplate.postForEntity(getRootUrl("/"),
-                    ClienteMock.getClienteMock(), Cliente.class);
+            ResponseEntity<Empresa> postResponse = testRestTemplate.postForEntity(getRootUrl("/"),
+                    EmpresaMock.getEmpresaMock(), Empresa.class);
 
             assertNotNull(postResponse);
             assertEquals(201, postResponse.getStatusCodeValue());
@@ -64,7 +59,7 @@ public class ClienteControllerIntegrationTest  {
 //        int id = 3;
 //        HttpHeaders headers = new HttpHeaders();
 //        HttpEntity<String> entity = new HttpEntity(null, headers);
-//        ResponseEntity<String> response = testRestTemplate.exchange(getRootUrl("/cliente/"+ id), HttpMethod.GET, entity, String.class);
+//        ResponseEntity<String> response = testRestTemplate.exchange(getRootUrl("/"+ id), HttpMethod.GET, entity, String.class);
 //        assertNotNull(response.getBody());
 //        assertEquals(entity,);
 //    }
@@ -73,32 +68,41 @@ public class ClienteControllerIntegrationTest  {
     @Test
     public void update(){
 
-        int id = 10;
-        Cliente cliente = testRestTemplate.getForObject(getRootUrl("/" +id) , Cliente.class);
+        int id = 1;
+        Empresa empresa = testRestTemplate.getForObject(getRootUrl("/" +id) , Empresa.class);
 
-        String novoNome = ClienteMock.getClienteMock().getNome();
-        cliente.setNome(novoNome);
-        String novoEmail = ClienteMock.getClienteMock().getEmail();
-        cliente.setEmail(novoEmail);
-        String novaSenha = ClienteMock.getClienteMock().getSenha();
-        cliente.setSenha(novaSenha);
+        String novoNome = EmpresaMock.getEmpresaMock().getNomeFantasia();
+        empresa.setNomeFantasia(novoNome);
+        String novaRazao = EmpresaMock.getEmpresaMock().getRazaoSocial();
+        empresa.setRazaoSocial(novaRazao);
+        String novoEmail = EmpresaMock.getEmpresaMock().getEmail();
+        empresa.setEmail(novoEmail);
+        Integer novoTelefone = EmpresaMock.getEmpresaMock().getTelefone();
+        empresa.setTelefone(novoTelefone);
+        String  novoCnpj = EmpresaMock.getEmpresaMock().getCnpj();
+        empresa.setCnpj(novoCnpj);
+        String novaRegiao = EmpresaMock.getEmpresaMock().getRegiao();
+        empresa.setRegiao(novaRegiao);
+        Integer novoPlano = EmpresaMock.getEmpresaMock().getPlano();
+        empresa.setPlano(novoPlano);
+        String novaSenha = EmpresaMock.getEmpresaMock().getSenha();
+        empresa.setSenha(novaSenha);
 
-      testRestTemplate.put(getRootUrl("/"+ id), cliente);
-        assertEquals(novoNome, cliente.getNome());
+        testRestTemplate.put(getRootUrl("/"+ id), empresa);
+        assertEquals(novaRazao, empresa.getRazaoSocial());
 
     }
 
     @Test
-    public void testDeleteCliente() {
-        int id = 100;
-        Cliente cliente = testRestTemplate.getForObject(getRootUrl("/"+ id), Cliente.class);
-        assertNotNull(cliente);
+    public void testDelete() {
+        int id = 1;
+        Empresa empresa = testRestTemplate.getForObject(getRootUrl("/"+ id), Empresa.class);
+        assertNotNull(empresa);
         testRestTemplate.delete(getRootUrl("/"+ id));
         try {
-           testRestTemplate.getForObject(getRootUrl("/"+ id) , Cliente.class);
+            testRestTemplate.getForObject(getRootUrl("/"+ id) , Empresa.class);
         } catch (final HttpClientErrorException e) {
             assertEquals(HttpStatus.NOT_FOUND, e.getStatusCode());
         }
     }
-
 }
