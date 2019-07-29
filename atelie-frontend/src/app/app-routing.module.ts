@@ -10,6 +10,7 @@ import { ProfissionalDetailComponent } from './profissional/profissional-detail/
 import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.component';
 import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.component';
 import { EmpresaDetailComponent } from './empresa/empresa-detail/empresa-detail.component';
+import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
 
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'clientes/adicionar', component: ClienteCreateComponent},
+  {path: 'cliente/modificar/:id', component: ClienteUpdateComponent},
   {path: 'cliente/detalhe/:id', component: ClienteDetailComponent},
   {path: 'profissionais', component: ProfissionalListComponent},
   {path: 'profissionais/adicionar', component: ProfissionalCreateComponent},

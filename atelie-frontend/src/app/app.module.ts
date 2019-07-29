@@ -6,7 +6,7 @@ import { ClienteCreateComponent } from './cliente/cliente-create/cliente-create.
 import { ClienteDetailComponent } from './cliente/cliente-detail/cliente-detail.component';
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 import { ClienteDeleteComponent } from './cliente/cliente-delete/cliente-delete.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfissionalListComponent } from './profissional/profissional-list/profissional-list.component';
 import { ProfissionalCreateComponent } from './profissional/profissional-create/profissional-create.component';
@@ -16,6 +16,7 @@ import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.compon
 import { EmpresaDetailComponent } from './empresa/empresa-detail/empresa-detail.component';
 import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.component';
 import { EmpresaDeleteComponent } from './empresa/empresa-delete/empresa-delete.component';
+import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
 
 
 
@@ -34,11 +35,14 @@ import { EmpresaDeleteComponent } from './empresa/empresa-delete/empresa-delete.
     EmpresaDetailComponent,
     EmpresaCreateComponent,
     EmpresaDeleteComponent,
+    ClienteUpdateComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
 
   ],

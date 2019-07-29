@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Cliente } from './cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,7 @@ export class ClienteService {
 
 
   // tslint:disable-next-line: ban-types
-  updateCliente(id: number, value: any): Observable<Object> {
+  updateCliente(id: number, value: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
@@ -35,5 +36,5 @@ export class ClienteService {
     return this.http.delete(`${this.baseUrl}/${id}`, {responseType: 'text'});
   }
 
-  
+
 }

@@ -18,7 +18,7 @@ export class ClienteCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  newPessoa(): void {
+  newCliente(): void {
     this.submitted = false;
     this.cliente = new Cliente();
   }
