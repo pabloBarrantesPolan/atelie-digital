@@ -1,7 +1,7 @@
 export class Empresa {
   id: number;
   razaoSocial: string;
-  nomeFantasia: string;
+  nomFantasia: string;
   cep: number;
   email: string;
   telefone: number;

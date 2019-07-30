@@ -31,6 +31,9 @@ export class EmpresaListComponent implements OnInit {
       }, error => console.log(error)
     );
   }
+  empresaUpdate(id: number) {
+    this.router.navigate(['empresas/modificar', id]);
+  }
 
   empresaDetails(id: number) {
     this.router.navigate(['empresas/detalhe', id]);

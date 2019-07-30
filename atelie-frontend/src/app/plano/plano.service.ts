@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PlanoService {
 
-  private baseUrl = 'http://localhost:9090/api/v1/planos';
+  private baseUrl = 'http://localhost:8082/api/v1/planos';
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class PlanoService {
   getPlanos(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
-  
+
   createPlano(plano: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, plano);
   }

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HttpParams, HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+//import { TokenStorageService } from '../../auth/token-storage.service';
 
 @Component({
   selector: 'app-cliente-update',
@@ -12,45 +13,48 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ClienteUpdateComponent implements OnInit {
 
-  id: number;
   cliente: Cliente;
-  submitted = false;
-  private baseUrl = 'http://localhost:8081/api/v1/clientes';
+  editForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private clienteService: ClienteService,
-              private router: Router, private httpClient: HttpClient) { }
+  constructor(/*private token: TokenStorageService,*/
+              private formBuilder: FormBuilder,
+              private route: ActivatedRoute,
+              private router: Router,
+              private clienteService: ClienteService) { }
 
   ngOnInit() {
-    this.cliente = new Cliente();
-    this.id = this.route.snapshot.params['id'];
-
+    let clienteId = this.route.snapshot.params['id'];
+    if(!clienteId) {
+      alert("Ação inválida!")
+      this.router.navigate(['clientes']);
+      return;
+    }
+    this.editForm = this.formBuilder.group({
+      id: [],
+      nome: ['', Validators.required],
+      email: ['', Validators.required],
+      senha: ['', Validators.required]
+    });
+    this.clienteService.getCliente(clienteId)
+    .subscribe( data => {
+      this.editForm.setValue(data);
+    });
   }
-  clienteAtualizado(): void {
-    this.submitted = false;
-
-  }
-
-update() {
-  const params = new HttpParams()
-    .set('nome', this.cliente.nome)
-    .set('email', this.cliente.email)
-    .set('senha', this.cliente.senha);
-  this.cliente.nome = params.get('nome');
-  this.cliente.email = params.get('email');
-  this.cliente.senha = params.get('senha');
-  this.clienteService.updateCliente(this.id, this.cliente);
-  this.gotoList();
-
- }
 
   onSubmit() {
-    this.submitted = true;
-    this.update();
+    let clienteId = this.route.snapshot.params['id'];
+    this.clienteService.updateCliente(clienteId, this.editForm.value)
+    .pipe(first())
+    .subscribe(
+      data => {
+        this.router.navigate(['clientes']);
+      },
+      error => {
+        alert(error);
+      });
   }
 
-  gotoList() {
-    setTimeout(() => {
-      this.router.navigate(['/clientes']);
-    }, 1500);
+  goToLogin() {
+    this.router.navigate(['login']);
   }
 }
