@@ -17,6 +17,9 @@ import { EmpresaDetailComponent } from './empresa/empresa-detail/empresa-detail.
 import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.component';
 import { EmpresaDeleteComponent } from './empresa/empresa-delete/empresa-delete.component';
 import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
+import { EmpresaUpdateComponent } from './empresa/empresa-update/empresa-update.component';
+import { ProfissionalUpdateComponent } from './profissional/profissional-update/profissional-update.component';
+import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
 
 
 
@@ -36,6 +39,9 @@ import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.
     EmpresaCreateComponent,
     EmpresaDeleteComponent,
     ClienteUpdateComponent,
+    EmpresaUpdateComponent,
+    ProfissionalUpdateComponent,
+    PlanoUpdateComponent,
 
   ],
   imports: [

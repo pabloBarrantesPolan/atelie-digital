@@ -1,0 +1,58 @@
+<h3>Cadastro de Profissional</h3>
+<div [hidden]="submitted" class="criarProfissional">
+
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="nomeFantasia">Nome Fantasía:</label>
+          <input type="text" formGroupName="nomeFantasia" name="nomeFantasia" class="form-control" id="nomeFantasia" required [(ngModel)]="empresa.nomeFantasia">
+        </div>
+        <div class="form-group">
+          <label for="razaoSocial">Razão Social:</label>
+          <input type="text" formGroupName="razaoSocial"name="razaoSocial" class="form-control" id="razaoSocial" required [(ngModel)]="empresa.razaoSocial">
+        </div>
+        <div class="form-group">
+          <label for="cnpj">CNPJ:</label>
+          <input type="number" formGroupName="cnpj" name="cnpj" class="form-control" id="cnpj" required [(ngModel)]="empresa.cnpj">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="number" formGroupName="telefone" name="telefone" class="form-control" id="telefone" required [(ngModel)]="empresa.telefone">
+        </div>
+        <div class="form-group">
+          <label for="regiao">Região:</label>
+          <input type="text" formGroupName="regiao" name="regiao" class="form-control" id="regiao" required [(ngModel)]="empresa.regiao">
+        </div>
+        <div class="form-group">
+          <label for="cep">Cep:</label>
+          <input type="number" formGroupName="cep" name="cep" class="form-control" id="cep" required [(ngModel)]="empresa.cep">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="plano">Plano:</label>
+          <input type="number" formGroupName="plano" name="plano" class="form-control" id="plano" required [(ngModel)]="empresa.plano">
+        </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formGroupName="email" name="email" class="form-control" id="email" required [(ngModel)]="empresa.email">
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" formGroupName="senha" name="senha" class="form-control" id="senha" required [(ngModel)]="empresa.senha">
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <button  type="submit" class="btn btn-success mr-3">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" class="alert alert-success">
+    <h4 class="">Enviado com sucesso!</h4>
+    <!-- <button class="btn btn-success" (click)="newPessoa()">Adicionar<button> -->
+    </div>
