@@ -2,10 +2,6 @@ package br.com.generation.projeto.ateliedigital.swaggerready;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -20,24 +16,24 @@ import static springfox.documentation.builders.PathSelectors.regex;
 public class SwaggerConfig  {
 
     @Bean
-    public Docket api() {
+    public Docket AteliedigitalApplication() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.generation.brazil.backend"))
-                .paths(PathSelectors.any())
-                .build().apiInfo(info());
+                .apis(RequestHandlerSelectors.basePackage("br.com.generation.projeto.ateliedigital"))
+                .paths(regex("/api/v1/.*"))
+                .build()
+                .apiInfo(metaData());
     }
-
-    private ApiInfo info() {
-        return new ApiInfoBuilder().title("Projeto Back-End")
-                .description("Um projeto para a primeira turma da Generation Brasil.")
-                .contact(new Contact("Jorge Ferreira",
-                        "www.jorgeferreira.com.br",
-                        "contato@jorgeferreira.com.br"))
-                .license("MIT License")
-                .licenseUrl("https://opensource.org/licenses/MIT")
-                .version("0.0.1")
-                .build();
+    private ApiInfo metaData() {
+        ApiInfo apiInfo = new ApiInfo(
+                "Spring Boot REST API",
+                "API para o app fictício Gfood, criada durante o curso de programação web full stack em Java do programa Generation Brasil. Desenvolvida por: Rodrigo Gregoldo (github.com/rdrggrgld).",
+                "1.0",
+                "Terms of service",
+                new Contact("Rodrigo Gregoldo", "https://github.com/rdrggrgld", "rodrigogregoldo@gmail.com").toString(),
+                "Apache License Version 2.0",
+                "https://www.apache.org/licenses/LICENSE-2.0");
+        return apiInfo;
     }
 
 

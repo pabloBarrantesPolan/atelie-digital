@@ -21,7 +21,9 @@
             <td>{{empresa.regiao}}</td>
 
             <td>
+              <button (click)="deleteEmpresa(empresa.id)" class="btn btn-danger">Remover</button>
               <button (click)="empresaDetails(empresa.id)" class="btn btn-info btnDetalhe">Detalhes</button>
+              <button (click)="empresaUpdate(empresa.id)" class="btn btn-warning btnDetalhe">Modificar</button>
             </td>
           </tr>
 
