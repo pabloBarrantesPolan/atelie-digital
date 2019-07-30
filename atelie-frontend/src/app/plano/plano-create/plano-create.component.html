@@ -1,0 +1,33 @@
+<h3>Criar Plano</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Tipo</label>
+      <input type="text" class="form-control" id="tipo"
+       required [(ngModel)]="plano.tipo" name="tipo">
+    </div>
+    <div class="form-group">
+      <label for="numero">Número</label>
+      <input type="text" class="form-control" id="numero"
+       required [(ngModel)]="plano.numero" name="numero">
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" class="form-control" id="descricao"
+       required [(ngModel)]="plano.descricao" name="descricao">
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input type="text" class="form-control" id="valor"
+       required [(ngModel)]="plano.valor" name="valor">
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Enviado com sucesso!</h4>
+  <button class="btn btn-success" (click)="newPessoa()">Adicionar</button> 
+</div>
+<br>
+<br>

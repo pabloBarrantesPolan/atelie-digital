@@ -1,0 +1,21 @@
+<h2>Detalhes do Plano</h2>
+<hr>
+<div *ngIf="plano">
+  <div>
+    <label><strong>Tipo: </strong></label> {{plano.tipo}}
+  </div>
+  <div>
+    <label><strong>Número: </strong></label> {{plano.numero}}
+  </div>
+  <div>
+    <label><strong>Descrição: </strong></label> {{plano.descricao}}
+  </div>
+  <div>
+    <label><strong>Valor: </strong></label> {{plano.valor}}
+  </div>
+  
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">
+  Voltar para a lista</button><br>

@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista dos Planos</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Número</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plano of planos | async">
+          <td>{{plano.tipo}}</td>
+          <td>{{plano.numero}}</td>  
+          <td>{{plano.descricao}}</td>
+          <td>{{plano.valor}}</td>
+          <td>
+            <button (click)="deletePlano(plano.id)" class="btn btn-danger">Delete</button>
+            <button (click)="planoDetails(plano.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
