@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "7638de4a-e498-4e60-a194-530092035e7f",
+		"name": "Profissionais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "salva novo professional",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"joao\",\n\t\"cep\": 174353,\n\t\"email\": \"tri@lo.com\",\n\t\"telefone\": 65546546,\n\t\"cpf\": 46456456,\n\t\"regiao\": \"Zona sul\",\n\t\"senha\": \"vanusa123456\",\n\t\"plano\":3\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista de professionais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pesquisa profissional pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "altera profisional pelo id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n     \n        \"nome\": \"PEPE\",\n        \"cpf\": \"32424353553\",\n        \"email\": \"pab@lo.com\",\n        \"telefone\": 23456543,\n        \"regiao\": \"Zona norte\",\n        \"cep\": \"1234556\",\n        \"senha\": \"pablo123456\",\n        \"plano\": 2\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/v1/profissionais/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pesquisa profissional por regiao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/profissionais/pesquisa/zona sul",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"profissionais",
+						"pesquisa",
+						"zona sul"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
