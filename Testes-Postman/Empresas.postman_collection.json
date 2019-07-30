@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "e26ec256-7e97-47a8-add9-37a0a5cf4842",
+		"name": "Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "criar nova empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\t\"razaoSocial\": \"Geni MEI\",\n        \"nomeFantasia\": \"geni\",\n        \"cnpj\": 123456987,\n        \"email\": \"ge.muniz@bol.com.br\",\n        \"telefone\": 12345697,\n        \"regiao\": \"centro\",\n        \"cep\": 123455,\n        \"senha\": \"nkfu892hnfx\",\n        \"plano\": 1\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista de empresas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pesquisa empresa pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "altera empresa pelo id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"razaoSocial\": \"PAblo MEI\",\n    \"nomeFantasia\": \"geni\",\n    \"cnpj\": \"123456987\",\n    \"email\": \"ge.muniz@bol.com.br\",\n    \"telefone\": 12345697,\n    \"regiao\": \"centro\",\n    \"cep\": \"123455\",\n    \"senha\": \"nkfu892hnfx\",\n    \"plano\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apaga empresa pelo id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"razaoSocial\": \"PAblo MEI\",\n    \"nomeFantasia\": \"geni\",\n    \"cnpj\": \"123456987\",\n    \"email\": \"ge.muniz@bol.com.br\",\n    \"telefone\": 12345697,\n    \"regiao\": \"centro\",\n    \"cep\": \"123455\",\n    \"senha\": \"nkfu892hnfx\",\n    \"plano\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pesquisa empresa por região",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/empresas/pesquisa/centro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						"pesquisa",
+						"centro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
