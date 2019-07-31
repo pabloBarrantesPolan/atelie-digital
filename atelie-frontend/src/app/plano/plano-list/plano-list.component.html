@@ -15,12 +15,13 @@
       <tbody>
         <tr *ngFor="let plano of planos | async">
           <td>{{plano.tipo}}</td>
-          <td>{{plano.numero}}</td>  
+          <td>{{plano.numero}}</td>
           <td>{{plano.descricao}}</td>
           <td>{{plano.valor}}</td>
           <td>
             <button (click)="deletePlano(plano.id)" class="btn btn-danger">Delete</button>
             <button (click)="planoDetails(plano.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+            <button (click)="planoUpdate(plano.id)" class="btn btn-warning btnDetalhe">Modificar</button>
           </td>
         </tr>
       </tbody>

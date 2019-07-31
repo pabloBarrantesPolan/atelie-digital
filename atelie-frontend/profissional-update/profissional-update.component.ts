@@ -1,43 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Profissional } from '../src/app/profissional/profissional';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EmpresaService } from '../empresa.service';
-import { Empresa } from '../empresa';
+import { ProfissionalService } from '../src/app/profissional/profissional.service';
 import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-empresa-update',
-  templateUrl: './empresa-update.component.html',
-  styleUrls: ['./empresa-update.component.css']
+  selector: 'app-profissional-update',
+  templateUrl: './profissional-update.component.html',
+  styleUrls: ['./profissional-update.component.css']
 })
-export class EmpresaUpdateComponent implements OnInit {
+export class ProfissionalUpdateComponent implements OnInit {
 
-  empresa: Empresa;
+  prof: Profissional;
   editForm: FormGroup;
 
 
   constructor(private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
-              private empresaService: EmpresaService) { }
+              private profissionalService: ProfissionalService) { }
 
   ngOnInit() {
-    let empresaId = this.route.snapshot.params['id'];
+    let profId = this.route.snapshot.params['id'];
 
     this.editForm = this.formBuilder.group({
       id: [],
-      nomeFantasia: ['', Validators.required],
-      razaoSocial: ['', Validators.required],
+      nome: ['', Validators.required],
       cep: ['', Validators.required],
       email: ['', Validators.required],
       telefone: ['', Validators.required],
-      cnpj: ['', Validators.required],
+      cpf: ['', Validators.required],
       regiao: ['', Validators.required],
       senha: ['', Validators.required],
       plano: ['', Validators.required]
 
     });
-    this.empresaService.getEmpresa(empresaId)
+    this.profissionalService.getProfissional(profId)
     .subscribe( data => {
       console.log(data);
       this.editForm.setValue(data);
@@ -45,14 +44,15 @@ export class EmpresaUpdateComponent implements OnInit {
     });
     }
     onSubmit() {
-      let empresaId = this.route.snapshot.params['id'];
-      this.empresaService.updateEmpresa(empresaId, this.editForm.value)
+      let profId = this.route.snapshot.params['id'];
+      this.profissionalService.updateProfissional(profId, this.editForm.value)
       .pipe(first()).subscribe(
         data => {
-          this.router.navigate(['empresas']);
+          this.router.navigate(['profissionais']);
         },
         error => {
           alert(error);
         });
     }
+
 }

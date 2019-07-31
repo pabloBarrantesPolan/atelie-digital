@@ -41,8 +41,8 @@ export class PlanoCreateComponent implements OnInit {
 
   gotoList() {
     setTimeout(() => {
-      
-      this.router.navigate(['/planos']);
+
+      this.router.navigate(['planos']);
     },1500);
   }
 

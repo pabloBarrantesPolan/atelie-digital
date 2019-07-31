@@ -12,6 +12,11 @@ import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.
 import { EmpresaDetailComponent } from './empresa/empresa-detail/empresa-detail.component';
 import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
 import { EmpresaUpdateComponent } from './empresa/empresa-update/empresa-update.component';
+import { PlanoListComponent } from './plano/plano-list/plano-list.component';
+import { PlanoCreateComponent } from './plano/plano-create/plano-create.component';
+import { PlanoDetailsComponent } from './plano/plano-details/plano-details.component';
+import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
+import { ProfissionalUpdateComponent } from '../../profissional-update/profissional-update.component';
 
 
 
@@ -24,10 +29,15 @@ const routes: Routes = [
   {path: 'profissionais', component: ProfissionalListComponent},
   {path: 'profissionais/adicionar', component: ProfissionalCreateComponent},
   {path: 'profissionais/detalhe/:id', component: ProfissionalDetailComponent},
+  {path: 'profissionais/modificar/:id', component: ProfissionalUpdateComponent},
   {path: 'empresas', component: EmpresaListComponent},
   {path: 'empresas/adicionar', component: EmpresaCreateComponent},
   {path: 'empresas/detalhe/:id', component: EmpresaDetailComponent},
-  {path: 'empresas/modificar/:id', component: EmpresaUpdateComponent}
+  {path: 'empresas/modificar/:id', component: EmpresaUpdateComponent},
+  {path: 'planos', component: PlanoListComponent},
+  {path: 'planos/adicionar', component: PlanoCreateComponent},
+  {path: 'planos/detalhe/:id', component: PlanoDetailsComponent},
+  {path: 'planos/modificar/:id', component: PlanoUpdateComponent}
 
 ];
 

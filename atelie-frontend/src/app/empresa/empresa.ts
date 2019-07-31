@@ -1,11 +1,11 @@
 export class Empresa {
   id: number;
   razaoSocial: string;
-  nomFantasia: string;
-  cep: number;
+  nomeFantasia: string;
+  cep: string;
   email: string;
   telefone: number;
-  cnpj: number;
+  cnpj: string;
   regiao: string;
   senha: string;
   plano: number;

@@ -36,6 +36,9 @@ export class PlanoListComponent implements OnInit {
       );
   }
 
+  planoUpdate(id: number) {
+    this.router.navigate(['planos/modificar', id]);
+  }
   planoDetails(id: number) {
     this.router.navigate(['details', id]);
   }
