@@ -15,11 +15,11 @@ export class PlanoService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
   getPlanos(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}/`);
   }
 
   createPlano(plano: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, plano);
+    return this.http.post(`${this.baseUrl}/`, plano);
   }
 
   updatePlano(id: number, value: any): Observable<Object> {

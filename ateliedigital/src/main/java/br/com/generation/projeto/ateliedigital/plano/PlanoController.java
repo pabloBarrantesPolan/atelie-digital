@@ -34,17 +34,17 @@ public class PlanoController {
         return repository.findById(id);
     }
 
-    @GetMapping("/{tipo}")
-    @ApiOperation(value = "Mostra lista de planos por tipo")
-    public List<Plano> findByNome(@PathVariable String tipo) {
-        return repository.findByTipo(tipo);
-    }
-
-    @GetMapping("/{numero}")
-    @ApiOperation(value = "Mostra lista de planos por numero")
-    public List<Plano> findByNumero(@PathVariable Integer numero) {
-        return repository.findByNumero(numero);
-    }
+//    @GetMapping("/pesquisa/{tipo}")
+//    @ApiOperation(value = "Mostra lista de planos por tipo")
+//    public List<Plano> findByNome(@PathVariable String tipo) {
+//        return repository.findByTipo(tipo);
+//    }
+//
+//    @GetMapping("/{numero}")
+//    @ApiOperation(value = "Mostra lista de planos por numero")
+//    public List<Plano> findByNumero(@PathVariable Integer numero) {
+//        return repository.findByNumero(numero);
+//    }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/")

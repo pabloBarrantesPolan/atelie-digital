@@ -18,8 +18,11 @@ import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.
 import { EmpresaDeleteComponent } from './empresa/empresa-delete/empresa-delete.component';
 import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
 import { EmpresaUpdateComponent } from './empresa/empresa-update/empresa-update.component';
-import { ProfissionalUpdateComponent } from './profissional/profissional-update/profissional-update.component';
 import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
+import { PlanoListComponent} from './plano/plano-list/plano-list.component';
+import { PlanoCreateComponent } from './plano/plano-create/plano-create.component';
+import { PlanoDetailsComponent } from './plano/plano-details/plano-details.component';
+import { ProfissionalUpdateComponent } from '../../profissional-update/profissional-update.component';
 
 
 
@@ -38,11 +41,13 @@ import { PlanoUpdateComponent } from './plano/plano-update/plano-update.componen
     EmpresaDetailComponent,
     EmpresaCreateComponent,
     EmpresaDeleteComponent,
-    ClienteUpdateComponent,
     EmpresaUpdateComponent,
-    ProfissionalUpdateComponent,
+    ClienteUpdateComponent,
     PlanoUpdateComponent,
-
+    PlanoListComponent,
+    PlanoCreateComponent,
+    PlanoDetailsComponent,
+    ProfissionalUpdateComponent
   ],
   imports: [
     BrowserModule,

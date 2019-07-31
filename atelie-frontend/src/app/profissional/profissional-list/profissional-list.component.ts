@@ -30,6 +30,9 @@ export class ProfissionalListComponent implements OnInit {
       }, error => console.log(error)
     );
   }
+  profissionalUpdate(id: number) {
+    this.router.navigate(['profissionais/modificar', id]);
+  }
 
   profissionalDetails(id: number) {
     this.router.navigate(['profissionais/detalhe', id]);

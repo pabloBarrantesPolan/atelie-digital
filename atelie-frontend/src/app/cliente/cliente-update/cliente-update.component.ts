@@ -24,11 +24,7 @@ export class ClienteUpdateComponent implements OnInit {
 
   ngOnInit() {
     let clienteId = this.route.snapshot.params['id'];
-    if(!clienteId) {
-      alert("Ação inválida!")
-      this.router.navigate(['clientes']);
-      return;
-    }
+  
     this.editForm = this.formBuilder.group({
       id: [],
       nome: ['', Validators.required],
@@ -58,3 +54,4 @@ export class ClienteUpdateComponent implements OnInit {
     this.router.navigate(['login']);
   }
 }
+
