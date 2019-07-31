@@ -1,0 +1,50 @@
+<h3>Cadastro de Profissional</h3>
+
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+       <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" formControlName="nome" name="nome" class="form-control" id="nome"  >
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input type="text" formControlName="cpf" name="cpf" class="form-control" id="cpf" >
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="number" formControlName="telefone" name="telefone" class="form-control" id="telefone"  >
+        </div>
+        <div class="form-group">
+          <label for="regiao">Região:</label>
+          <input type="text" formControlName="regiao" name="regiao" class="form-control" id="regiao"  >
+        </div>
+        <div class="form-group">
+          <label for="cep">Cep:</label>
+          <input type="text" formControlName="cep" name="cep" class="form-control" id="cep"  >
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="plano">Plano:</label>
+          <input type="number" formControlName="plano" name="plano" class="form-control" id="plano"  >
+        </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" name="email" class="form-control" id="email"  >
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" formControlName="senha" name="senha" class="form-control" id="senha" >
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <button  type="submit" class="btn btn-success mr-3">Salvar</button>
+      </div>
+    </form>
+
+
+

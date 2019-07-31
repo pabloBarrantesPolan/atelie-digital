@@ -16,12 +16,17 @@ import { PlanoListComponent } from './plano/plano-list/plano-list.component';
 import { PlanoCreateComponent } from './plano/plano-create/plano-create.component';
 import { PlanoDetailsComponent } from './plano/plano-details/plano-details.component';
 import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
-import { ProfissionalUpdateComponent } from '../../profissional-update/profissional-update.component';
+import { ProfissionalUpdateComponent } from './profissional/profissional-update/profissional-update.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
+import { ContatoComponent } from './pages/contato/contato.component';
+import { EncontreComponent } from './pages/encontre/encontre.component';
 
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'clientes/adicionar', component: ClienteCreateComponent},
   {path: 'cliente/modificar/:id', component: ClienteUpdateComponent},
@@ -37,7 +42,13 @@ const routes: Routes = [
   {path: 'planos', component: PlanoListComponent},
   {path: 'planos/adicionar', component: PlanoCreateComponent},
   {path: 'planos/detalhe/:id', component: PlanoDetailsComponent},
-  {path: 'planos/modificar/:id', component: PlanoUpdateComponent}
+  {path: 'planos/modificar/:id', component: PlanoUpdateComponent},
+  {path: 'sobre-nos', component: SobreNosComponent},
+  {path: 'contato', component: ContatoComponent},
+  {path: 'encontre', component: EncontreComponent}
+
+
+
 
 ];
 
