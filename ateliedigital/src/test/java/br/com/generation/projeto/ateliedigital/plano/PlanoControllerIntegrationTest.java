@@ -1,17 +1,23 @@
 package br.com.generation.projeto.ateliedigital.plano;
 
-import br.com.generation.projeto.ateliedigital.profissional.Profissional;
-import br.com.generation.projeto.ateliedigital.profissional.ProfissionalMock;
+
+import br.com.generation.projeto.ateliedigital.AteliedigitalApplication;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = AteliedigitalApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PlanoControllerIntegrationTest {
 
     @Autowired
@@ -19,7 +25,6 @@ public class PlanoControllerIntegrationTest {
 
     @LocalServerPort
     private int port;
-    private Plano plano = new Plano();
     private String getRootUrl(String path){
         return "http://localhost:" + port + "/api/v1/planos" + path;
     }
@@ -28,12 +33,8 @@ public class PlanoControllerIntegrationTest {
     public void save(){
 
         for (int i = 0; i < 10; i++) {
-            ResponseEntity<Profissional> postResponse = testRestTemplate.postForEntity(getRootUrl("/"),
-                    this.plano.setNumero(12),
-                    this.plano.setTipo("tipo muito bom"),
-                    this.plano.setDescricao("Plano maravilhoso de acesso à plataforma"),
-                    this.plano.setValor("muito");
-
+            ResponseEntity<Plano> postResponse = testRestTemplate.postForEntity(getRootUrl("/"),
+                    PlanoMock.getPlanoMock(),Plano.class);
             assertNotNull(postResponse);
             assertEquals(201, postResponse.getStatusCodeValue());
         }
@@ -66,39 +67,30 @@ public class PlanoControllerIntegrationTest {
     @Test
     public void update(){
 
-        int id = 13;
-        Profissional profissional = testRestTemplate.getForObject(getRootUrl("/" +id) , Profissional.class);
+        int id = 1;
+        Plano plano = testRestTemplate.getForObject(getRootUrl("/" +id) , Plano.class);
 
-        String novoNome = ProfissionalMock.getProfissionalMock().getNome();
-        profissional.setNome(novoNome);
+        String novoTipo = PlanoMock.getPlanoMock().getTipo();
+        plano.setTipo(novoTipo);
+        String novaDesc = PlanoMock.getPlanoMock().getDescricao();
+        plano.setDescricao(novaDesc);
+        String novoValor = PlanoMock.getPlanoMock().getValor();
+        plano.setValor(novoValor);
 
 
-        String novoEmail = ProfissionalMock.getProfissionalMock().getEmail();
-        profissional.setEmail(novoEmail);
-        Integer novoTelefone = ProfissionalMock.getProfissionalMock().getTelefone();
-        profissional.setTelefone(novoTelefone);
-        String  novoCpf = ProfissionalMock.getProfissionalMock().getCpf();
-        profissional.setCpf(novoCpf);
-        String novaRegiao = ProfissionalMock.getProfissionalMock().getRegiao();
-        profissional.setRegiao(novaRegiao);
-        Integer novoPlano = ProfissionalMock.getProfissionalMock().getPlano();
-        profissional.setPlano(novoPlano);
-        String novaSenha = ProfissionalMock.getProfissionalMock().getSenha();
-        profissional.setSenha(novaSenha);
-
-        testRestTemplate.put(getRootUrl("/"+ id), profissional);
-        assertEquals(novoNome, profissional.getNome());
+        testRestTemplate.put(getRootUrl("/"+ id), plano);
+        assertEquals(novoTipo, plano.getTipo());
 
     }
 
     @Test
     public void testDelete() {
         int id = 9;
-        Profissional profissional = testRestTemplate.getForObject(getRootUrl("/"+ id), Profissional.class);
-        assertNotNull(profissional);
+        Plano plano = testRestTemplate.getForObject(getRootUrl("/"+ id), Plano.class);
+        assertNotNull(plano);
         testRestTemplate.delete(getRootUrl("/"+ id));
         try {
-            testRestTemplate.getForObject(getRootUrl("/"+ id) , Profissional.class);
+            testRestTemplate.getForObject(getRootUrl("/"+ id) , Plano.class);
         } catch (final HttpClientErrorException e) {
             assertEquals(HttpStatus.NOT_FOUND, e.getStatusCode());
         }
