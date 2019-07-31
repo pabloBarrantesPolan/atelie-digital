@@ -1,6 +1,6 @@
 package br.com.generation.projeto.ateliedigital.cliente;
 
-import br.com.generation.projeto.ateliedigital.resourceNotFoundException.ResourceNotFoundException;
+import br.com.generation.projeto.ateliedigital.exception.ResourceNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

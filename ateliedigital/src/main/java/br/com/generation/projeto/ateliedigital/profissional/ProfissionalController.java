@@ -1,6 +1,6 @@
 package br.com.generation.projeto.ateliedigital.profissional;
 
-import br.com.generation.projeto.ateliedigital.resourceNotFoundException.ResourceNotFoundException;
+import br.com.generation.projeto.ateliedigital.exception.ResourceNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
