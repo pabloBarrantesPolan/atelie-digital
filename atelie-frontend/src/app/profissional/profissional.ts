@@ -1,3 +1,5 @@
+import { Plano } from '../plano/plano';
+
 export class Profissional {
   id: number;
   nome: string;
@@ -7,5 +9,5 @@ export class Profissional {
   cpf: number;
   regiao: string;
   senha: string;
-  plano: number;
+  plano: Plano;
 }

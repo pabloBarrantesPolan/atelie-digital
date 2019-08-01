@@ -24,11 +24,13 @@
         </div>
         <div class="form-group">
           <label for="cep">Cep:</label>
-          <input type="number" name="cep" class="form-control" id="cep" required [(ngModel)]="profissional.cep">
+          <input type="text" name="cep" class="form-control" id="cep" required [(ngModel)]="profissional.cep">
         </div>
         <div class="form-group">
-          <label for="plano">Plano:</label>
-          <input type="number" name="plano" class="form-control" id="plano" required [(ngModel)]="profissional.plano">
+         <select [(ngModel)]="profissional.plano" name="plano" id="plano">
+           <option *ngFor="let plano of planos | async" [ngValue]="plano">{{ plano.tipo }}</option>
+         </select>
+
         </div>
       </div>
         <div class="col">

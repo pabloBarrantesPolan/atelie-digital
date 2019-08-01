@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Profissional } from '../profissional';
 import { ProfissionalService } from '../profissional.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Plano } from 'src/app/plano/plano';
 
 @Component({
   selector: 'app-profissional-create',
@@ -11,12 +13,18 @@ import { Router } from '@angular/router';
 
 export class ProfissionalCreateComponent implements OnInit {
 
+  planos: Observable<Plano[]>;
   profissional: Profissional = new Profissional();
   submitted = false;
 
   constructor(private profissionalService: ProfissionalService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  seleciona() {
+   
+
   }
 
   newPessoa(): void {

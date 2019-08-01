@@ -1,6 +1,7 @@
 package br.com.generation.projeto.ateliedigital.profissional;
 
 import br.com.generation.projeto.ateliedigital.AteliedigitalApplication;
+import br.com.generation.projeto.ateliedigital.plano.Plano;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
+
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -82,7 +85,7 @@ public class ProfissionalControllerIntegrationTest {
         profissional.setCpf(novoCpf);
         String novaRegiao = ProfissionalMock.getProfissionalMock().getRegiao();
         profissional.setRegiao(novaRegiao);
-        Integer novoPlano = ProfissionalMock.getProfissionalMock().getPlano();
+        Plano novoPlano = ProfissionalMock.getProfissionalMock().getPlano();
         profissional.setPlano(novoPlano);
         String novaSenha = ProfissionalMock.getProfissionalMock().getSenha();
         profissional.setSenha(novaSenha);
