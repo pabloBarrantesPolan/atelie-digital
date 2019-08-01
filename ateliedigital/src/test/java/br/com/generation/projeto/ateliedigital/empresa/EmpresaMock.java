@@ -1,14 +1,17 @@
 package br.com.generation.projeto.ateliedigital.empresa;
 
+import br.com.generation.projeto.ateliedigital.plano.Plano;
 import com.github.javafaker.Faker;
 
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 public class EmpresaMock {
     public static Empresa getEmpresaMock(){
 
         Faker faker = new Faker(new Locale("pt-BR"));
-
+       Plano plano = new Plano();
 
         Empresa empresa = new Empresa();
         empresa.setRazaoSocial(faker.name().firstName());
@@ -18,7 +21,7 @@ public class EmpresaMock {
         empresa.setRegiao("Zona leste");
         empresa.setCep(faker.number().digits(8));
         empresa.setCnpj(faker.number().digits(11));
-        empresa.setPlano(faker.number().randomDigit());
+        empresa.setPlano(plano);
         empresa.setSenha(faker.internet().password());
 
         return empresa;

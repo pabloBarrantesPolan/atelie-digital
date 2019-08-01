@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Profissional } from '../src/app/profissional/profissional';
+import { Profissional } from '../profissional';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProfissionalService } from '../src/app/profissional/profissional.service';
+import { ProfissionalService } from '../profissional.service';
 import { first } from 'rxjs/operators';
 
 @Component({
