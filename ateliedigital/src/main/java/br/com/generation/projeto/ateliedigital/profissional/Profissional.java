@@ -1,11 +1,14 @@
 package br.com.generation.projeto.ateliedigital.profissional;
 
 
+import br.com.generation.projeto.ateliedigital.plano.Plano;
 import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -39,5 +42,7 @@ public class Profissional {
     private String senha;
 
     @NotNull
-    private  Integer plano;
+    @OneToMany
+    @JoinColumn(name = "id")
+    private Set<Plano> plano = new HashSet<>();
 }

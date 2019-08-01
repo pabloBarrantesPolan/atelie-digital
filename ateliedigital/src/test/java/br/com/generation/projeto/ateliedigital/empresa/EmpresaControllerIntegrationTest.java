@@ -1,6 +1,7 @@
 package br.com.generation.projeto.ateliedigital.empresa;
 
 import br.com.generation.projeto.ateliedigital.AteliedigitalApplication;
+import br.com.generation.projeto.ateliedigital.plano.Plano;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
+
+import java.util.HashSet;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -83,7 +86,7 @@ public class EmpresaControllerIntegrationTest {
         empresa.setCnpj(novoCnpj);
         String novaRegiao = EmpresaMock.getEmpresaMock().getRegiao();
         empresa.setRegiao(novaRegiao);
-        Integer novoPlano = EmpresaMock.getEmpresaMock().getPlano();
+        HashSet<Plano> novoPlano = (HashSet<Plano>) EmpresaMock.getEmpresaMock().getPlano();
         empresa.setPlano(novoPlano);
         String novaSenha = EmpresaMock.getEmpresaMock().getSenha();
         empresa.setSenha(novaSenha);
