@@ -45,4 +45,8 @@ public class Profissional {
     @OneToMany
     @JoinColumn(name = "id")
     private Set<Plano> plano = new HashSet<>();
+
+    @NotNull
+    @Column(name = "url_imagem")
+    private String urlImagem;
 }

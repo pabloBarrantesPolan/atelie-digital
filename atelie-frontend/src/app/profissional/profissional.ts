@@ -8,4 +8,5 @@ export class Profissional {
   regiao: string;
   senha: string;
   plano: number;
+  urlImagem: string;
 }

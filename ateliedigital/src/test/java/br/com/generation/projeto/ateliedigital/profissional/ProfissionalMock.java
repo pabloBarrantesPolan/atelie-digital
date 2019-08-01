@@ -23,6 +23,7 @@ public class ProfissionalMock {
         profissional.setCpf(faker.number().digits(11));
         profissional.setPlano(plano);
         profissional.setSenha(faker.internet().password());
+        profissional.setUrlImagem("https://pixabay.com/pt/photos/felicidade-pessoas-costureira-1201335/");
 
         return profissional;
     }

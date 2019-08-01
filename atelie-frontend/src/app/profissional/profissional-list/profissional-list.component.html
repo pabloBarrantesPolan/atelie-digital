@@ -6,6 +6,7 @@
     <table class="table table-striped">
         <thead>
           <tr>
+            <th>Foto: </th>
             <th>Nome:</th>
             <th>Email:</th>
             <th>Telefone:</th>
@@ -15,6 +16,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let profissional of profissionais | async">
+            <td><img class="fotoPerfil" src="{{profissional.urlImagem}}" alt=""></td>
             <td>{{profissional.nome}}</td>
             <td>{{profissional.email}}</td>
             <td>{{profissional.telefone}}</td>
