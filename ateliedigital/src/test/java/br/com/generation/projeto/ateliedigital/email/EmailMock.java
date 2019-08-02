@@ -11,7 +11,7 @@ public class EmailMock {
 
 
         Email email = new Email();
-        email.setEmailremetente(faker.internet().emailAddress());
+        email.setEmailRemetente(faker.internet().emailAddress());
         email.setAssunto( faker.commerce().productName());
         email.setConteudo("olá meu nome é: "+faker.name().firstName());
 

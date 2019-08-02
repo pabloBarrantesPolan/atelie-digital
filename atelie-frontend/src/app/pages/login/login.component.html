@@ -1,12 +1,13 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
       <!-- Tabs Titles -->
-  
+
       <!-- Icon -->
       <div class="fadeIn first">
         <img src="../../assets/img/logo.jpeg" id="icon" alt="User Icon" />
         <h1>Efetuar Login</h1>
       </div>
+<<<<<<< HEAD
   
       <form [formGroup]="loginForm" (ngSubmit)="login()">
           <input type="text" id="email" class="fadeIn second" name="email" formControlName="email" placeholder="E-mail ou Usuario">
@@ -15,12 +16,25 @@
             <input type="password" placeholder="Senha" formControlName="senha">
           </p>
             <div *ngIf="formControls.password.errors.required">Senha Obrigatoria</div>
+=======
+
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <input type="text" id="nome" class="fadeIn second" name="nome" [(ngModel)]="profissional.nome" #username="ngModel" placeholder="E-mail ou Usuario">
+        <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required"><span class="error">Por favor, preencha o campo usuário ou E-mail</span></div>
+        </div>
+        <input type="password" id="password" class="fadeIn third" name="password" [(ngModel)]="form.senha" #password="ngModel" required minlength="8" placeholder="Senha">
+        <div *ngIf="f.submitted && password.invalid">
+            <div *ngIf="password.errors.required"><span class="error">Por favor, preencha o campo senha</span></div>
+            <div *ngIf="password.errors.minlength"><span class="error">O campo senha deve ter mais que 8 caracteres</span></div>
+            </div>
+>>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
             <input type="submit" class="fadeIn fourth" value="Login">
           </form>
-  
+
       <div id="formFooter">
         <a class="underlineHover" routerLink="/cadastro">Seja um Profissional</a>
       </div>
-  
+
     </div>
   </div>

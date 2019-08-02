@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProfissionalService {
 
-  private baseUrl = 'http://localhost:8080/api/v1/profissionais';
+  private baseUrl = 'http://localhost:8082/api/v1/profissionais';
 
   constructor(private http: HttpClient) { }
 

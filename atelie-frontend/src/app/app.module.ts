@@ -12,12 +12,7 @@ import { ProfissionalListComponent } from './profissional/profissional-list/prof
 import { ProfissionalCreateComponent } from './profissional/profissional-create/profissional-create.component';
 import { ProfissionalDetailComponent } from './profissional/profissional-detail/profissional-detail.component';
 import { ProfissionalDeleteComponent } from './profissional/profissional-delete/profissional-delete.component';
-import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.component';
-import { EmpresaDetailComponent } from './empresa/empresa-detail/empresa-detail.component';
-import { EmpresaCreateComponent } from './empresa/empresa-create/empresa-create.component';
-import { EmpresaDeleteComponent } from './empresa/empresa-delete/empresa-delete.component';
 import { ClienteUpdateComponent } from './cliente/cliente-update/cliente-update.component';
-import { EmpresaUpdateComponent } from './empresa/empresa-update/empresa-update.component';
 import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
 import { PlanoListComponent} from './plano/plano-list/plano-list.component';
 import { PlanoCreateComponent } from './plano/plano-create/plano-create.component';
@@ -31,8 +26,15 @@ import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { LoginComponent } from './pages/login/login.component';
+<<<<<<< HEAD
 import { AdminComponent } from './pages/admin/admin.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
+=======
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { EmailListComponent } from './pages/contato/email-list/email-list.component';
+import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
+>>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
 
 
 
@@ -48,11 +50,6 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     ProfissionalCreateComponent,
     ProfissionalDetailComponent,
     ProfissionalDeleteComponent,
-    EmpresaListComponent,
-    EmpresaDetailComponent,
-    EmpresaCreateComponent,
-    EmpresaDeleteComponent,
-    EmpresaUpdateComponent,
     ClienteUpdateComponent,
     PlanoUpdateComponent,
     PlanoListComponent,
@@ -67,9 +64,17 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     ContatoComponent,
     EncontreComponent,
     LoginComponent,
+<<<<<<< HEAD
     AdminComponent,
     UsuarioComponent,
    
+=======
+    AdminLoginComponent,
+    AdminHomeComponent,
+    EmailListComponent,
+    EmailDetailsComponent,
+
+>>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
   ],
   imports: [
     BrowserModule,
