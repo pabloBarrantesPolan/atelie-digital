@@ -20,6 +20,12 @@ import { ProfissionalUpdateComponent } from './profissional/profissional-update/
 import { HomeComponent } from './pages/home/home.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { AuthGuard } from './auth/auth.guard';
+import { ContatoComponent } from './pages/contato/contato.component';
+import { EncontreComponent } from './pages/encontre/encontre.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+
 
 
 
@@ -27,8 +33,11 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'contato', component: ContatoComponent},
+  {path: 'usuario', component: UsuarioComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'clientes', component: ClienteListComponent},
+  {path: 'encontre', component: EncontreComponent},
   {path: 'clientes/adicionar', component: ClienteCreateComponent},
   {path: 'cliente/modificar/:id', component: ClienteUpdateComponent},
   {path: 'cliente/detalhe/:id', component: ClienteDetailComponent},
@@ -43,7 +52,9 @@ const routes: Routes = [
   {path: 'planos', component: PlanoListComponent},
   {path: 'planos/adicionar', component: PlanoCreateComponent},
   {path: 'planos/detalhe/:id', component: PlanoDetailsComponent},
-  {path: 'planos/modificar/:id', component: PlanoUpdateComponent}
+  {path: 'planos/modificar/:id', component: PlanoUpdateComponent},
+  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
+  {path: 'lista-profissionais', component: ProfissionalListComponent}
 
 ];
 

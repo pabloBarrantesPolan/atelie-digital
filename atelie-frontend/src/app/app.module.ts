@@ -31,6 +31,8 @@ import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 
 
@@ -65,6 +67,8 @@ import { LoginComponent } from './pages/login/login.component';
     ContatoComponent,
     EncontreComponent,
     LoginComponent,
+    AdminComponent,
+    UsuarioComponent,
    
   ],
   imports: [

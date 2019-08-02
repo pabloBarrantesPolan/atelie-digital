@@ -1,56 +1,91 @@
-<h3>Cadastro de Profissional</h3>
-<div [hidden]="submitted" class="criarProfissional">
-
-  <form (ngSubmit)="onSubmit()">
-    <div class="row">
-      <div class="col">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" name="nome" class="form-control" id="nome" required [(ngModel)]="profissional.nome">
-        </div>
-        <div class="form-group">
-          <label for="cpf">CPF:</label>
-          <input type="number" name="cpf" class="form-control" id="cpf" required [(ngModel)]="profissional.cpf">
-        </div>
-        <div class="form-group">
-          <label for="telefone">Telefone:</label>
-          <input type="number" name="telefone" class="form-control" id="telefone" required [(ngModel)]="profissional.telefone">
-        </div>
-      </div>
-      <div class="col">
-        <div class="form-group">
-          <label for="regiao">Região:</label>
-          <input type="text" name="regiao" class="form-control" id="regiao" required [(ngModel)]="profissional.regiao">
-        </div>
-        <div class="form-group">
-          <label for="cep">Cep:</label>
-          <input type="text" name="cep" class="form-control" id="cep" required [(ngModel)]="profissional.cep">
-        </div>
-        <div class="form-group">
-         <select [(ngModel)]="profissional.plano" name="plano" id="plano">
-           <option *ngFor="let plano of planos | async" [ngValue]="plano">{{ plano.tipo }}</option>
-         </select>
-
-        </div>
-      </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="email" class="form-control" id="email" required [(ngModel)]="profissional.email">
-          </div>
-          <div class="form-group">
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" class="form-control" id="senha" required [(ngModel)]="profissional.senha">
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-end">
-        <button  type="submit" class="btn btn-success mr-3">Salvar</button>
-      </div>
-    </form>
-  </div>
-
-  <div [hidden]="!submitted" class="alert alert-success">
-    <h4 class="">Enviado com sucesso!</h4>
-    <!-- <button class="btn btn-success" (click)="newPessoa()">Adicionar<button> -->
+<div class="container">
+    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">Cadastrar</div>
+                                <div class="card-body">
+    
+                                    <form class="form-horizontal" method="post" action="#">
+    
+                                        <div class="form-group">
+                                            <label for="name" class="cols-sm-2 control-label">Seu Nome</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                    required [(ngModel)]="profissional.nome" placeholder="Seu Nome" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="cols-sm-2 control-label">Seu E-mail</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="email" id="email" 
+                                                    required [(ngModel)]="profissional.email" placeholder="Seu E-mail" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cep" class="cols-sm-2 control-label">Cep</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="cep" id="cep" placeholder="Cep"
+                                                    required [(ngModel)]="profissional.cep" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cpf" class="cols-sm-2 control-label">Cpf</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf"
+                                                    required [(ngModel)]="profissional.cpf" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="plano" class="cols-sm-2 control-label">Plano</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" name="plano" id="plano" placeholder="Plano"
+                                                    required [(ngModel)]="profissional.plano" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="password" class="cols-sm-2 control-label">Senha</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                    <input type="password" class="form-control" name="password" id="password" placeholder="Sua Senha" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm" class="cols-sm-2 control-label">Confirmar Senha</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                    <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirmar senha" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <button type="button" class="btn btn-primary btn-lg btn-block login-button">Cadastrar</button>
+                                        </div>
+                                        <div class="login-register">
+                                            <a href="/login">Login</a>
+                                        </div>
+                                    </form>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
     </div>

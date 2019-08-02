@@ -16,6 +16,7 @@ export class ProfissionalCreateComponent implements OnInit {
   planos: Observable<Plano[]>;
   profissional: Profissional = new Profissional();
   submitted = false;
+  authService: any;
 
   constructor(private profissionalService: ProfissionalService, private router: Router) { }
 
@@ -50,9 +51,13 @@ export class ProfissionalCreateComponent implements OnInit {
 
   gotoList() {
     setTimeout(() => {
-      this.router.navigate(['/profissionais']);
+      this.router.navigate(['/usuario']);
     }, 1500);
 
+  }
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('/home');
   }
 
 }
