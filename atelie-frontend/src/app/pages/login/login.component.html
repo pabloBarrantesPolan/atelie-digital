@@ -1,15 +1,15 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
       <!-- Tabs Titles -->
-  
+
       <!-- Icon -->
       <div class="fadeIn first">
         <img src="../../assets/img/logo.jpeg" id="icon" alt="User Icon" />
         <h1>Efetuar Login</h1>
       </div>
-  
+
       <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-        <input type="text" id="nome" class="fadeIn second" name="nome" [(ngModel)]="profissional.nome" #username="ngModel" placeholder="E-mail ou Usuario">
+        <input type="text" id="nome" class="fadeIn second" name="nome" [(ngModel)]="form.nome" #username="ngModel" placeholder="E-mail ou Usuario">
         <div *ngIf="f.submitted && username.invalid">
           <div *ngIf="username.errors.required"><span class="error">Por favor, preencha o campo usuário ou E-mail</span></div>
         </div>
@@ -23,10 +23,10 @@
                 <span class="error">Falha no login: {{errorMessage}}</span>
               </div>
           </form>
-  
+
       <div id="formFooter">
         <a class="underlineHover" routerLink="/registro">Seja um Profissional</a>
       </div>
-  
+
     </div>
   </div>

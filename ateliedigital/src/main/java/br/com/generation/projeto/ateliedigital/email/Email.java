@@ -8,13 +8,14 @@ import javax.validation.constraints.NotNull;
 @Data
 @Entity
 public class Email {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
     @NotNull
     @Column(name = "email_remetente")
-    private String Emailremetente;
+    private String emailRemetente;
 
     @NotNull
     private String assunto;
