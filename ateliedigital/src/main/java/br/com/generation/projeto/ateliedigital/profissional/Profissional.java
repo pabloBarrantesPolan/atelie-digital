@@ -16,7 +16,7 @@ public class Profissional {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long id;
 
     @NotNull
     private String nome;
@@ -33,7 +33,7 @@ public class Profissional {
     private Integer telefone;
 
     @NotNull
-    private String  regiao;
+    private String regiao;
 
     @NotNull
     private String cep;
@@ -42,7 +42,6 @@ public class Profissional {
     private String senha;
 
     @NotNull
-    @OneToOne
-    @JoinColumn(name = "id")
-    private Plano plano = new Plano();
+    private String plano;
+
 }

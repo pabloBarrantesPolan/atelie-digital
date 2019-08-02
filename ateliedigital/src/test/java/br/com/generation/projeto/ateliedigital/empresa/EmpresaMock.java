@@ -21,7 +21,7 @@ public class EmpresaMock {
         empresa.setRegiao("Zona leste");
         empresa.setCep(faker.number().digits(8));
         empresa.setCnpj(faker.number().digits(11));
-        empresa.setPlano(plano);
+        empresa.setPlano(faker.name().title());
         empresa.setSenha(faker.internet().password());
 
         return empresa;
