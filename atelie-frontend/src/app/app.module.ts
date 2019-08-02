@@ -26,6 +26,10 @@ import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { EmailListComponent } from './pages/contato/email-list/email-list.component';
+import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
 
 
 
@@ -55,6 +59,10 @@ import { LoginComponent } from './pages/login/login.component';
     ContatoComponent,
     EncontreComponent,
     LoginComponent,
+    AdminLoginComponent,
+    AdminHomeComponent,
+    EmailListComponent,
+    EmailDetailsComponent,
 
   ],
   imports: [

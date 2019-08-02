@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>E-mails recebidos:</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Email:</th>
+            <th>Asunto:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let email of emails | async">
+            <td>{{email.emailRemetente}}</td>
+            <td>{{email.assunto}}</td>
+            <td>
+              <button (click)="deleteEmail(email.id)" class="btn btn-danger">Remover</button>
+              <button (click)="emailDetails(email.id)" class="btn btn-info btnDetalhe">Detalhes</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

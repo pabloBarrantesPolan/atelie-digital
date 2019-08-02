@@ -17,11 +17,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
 
 
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'admin', component: AdminLoginComponent},
+  {path: 'admin/home', component: AdminHomeComponent},
+  {path: 'admin/emails/detalhe/:id', component: EmailDetailsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contato', component: ContatoComponent},

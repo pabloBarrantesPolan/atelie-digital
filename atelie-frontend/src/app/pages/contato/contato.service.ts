@@ -11,11 +11,11 @@ export class ContatoService {
 
   constructor(private http: HttpClient) { }
 
-  getEmail(): Observable<any> {
+  getEmails(): Observable<any> {
     return this.http.get(`${this.baseUrl}/`);
   }
 
-  getEmails(id: number): Observable<any> {
+  getEmail(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 

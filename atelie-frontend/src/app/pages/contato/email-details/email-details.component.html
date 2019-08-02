@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h2>Detalhes do E-mail:</h2>
+  <hr>
+  <div *ngIf="email">
+    <div>
+      <label>
+        <strong>Remetente: </strong> {{email.emailRemetente}}
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <strong>Assunto: </strong> {{email.assunto}}
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <strong>Conteúdo: </strong> {{email.conteudo}}
+      </label>
+    </div>
+
+    <button (click)="list()" class="btn btn-primary listar" >Voltar à lista</button>
+  </div>
+
+</div>
