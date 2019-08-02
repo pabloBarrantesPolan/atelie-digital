@@ -17,11 +17,17 @@ import { PlanoCreateComponent } from './plano/plano-create/plano-create.componen
 import { PlanoDetailsComponent } from './plano/plano-details/plano-details.component';
 import { PlanoUpdateComponent } from './plano/plano-update/plano-update.component';
 import { ProfissionalUpdateComponent } from './profissional/profissional-update/profissional-update.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'clientes/adicionar', component: ClienteCreateComponent},
   {path: 'cliente/modificar/:id', component: ClienteUpdateComponent},

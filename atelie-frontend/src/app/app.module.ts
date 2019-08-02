@@ -23,6 +23,15 @@ import { PlanoListComponent} from './plano/plano-list/plano-list.component';
 import { PlanoCreateComponent } from './plano/plano-create/plano-create.component';
 import { PlanoDetailsComponent } from './plano/plano-details/plano-details.component';
 import { ProfissionalUpdateComponent } from './profissional/profissional-update/profissional-update.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CardsComponent } from './shared/cards/cards.component';
+import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
+import { ContatoComponent } from './pages/contato/contato.component';
+import { EncontreComponent } from './pages/encontre/encontre.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 
@@ -47,7 +56,16 @@ import { ProfissionalUpdateComponent } from './profissional/profissional-update/
     PlanoListComponent,
     PlanoCreateComponent,
     PlanoDetailsComponent,
-    ProfissionalUpdateComponent
+    ProfissionalUpdateComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent,
+    CardsComponent,
+    SobreNosComponent,
+    ContatoComponent,
+    EncontreComponent,
+    LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
