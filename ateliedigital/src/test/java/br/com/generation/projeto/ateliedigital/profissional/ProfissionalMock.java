@@ -20,7 +20,7 @@ public class ProfissionalMock {
         profissional.setRegiao("Zona leste");
         profissional.setCep(faker.number().digits(8));
         profissional.setCpf(faker.number().digits(11));
-        profissional.setPlano(plano);
+        profissional.setPlano(faker.name().title());
         profissional.setSenha(faker.internet().password());
 
         return profissional;

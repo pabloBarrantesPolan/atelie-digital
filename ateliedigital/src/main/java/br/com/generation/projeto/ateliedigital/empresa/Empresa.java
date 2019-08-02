@@ -45,7 +45,5 @@ public class Empresa {
     private String senha;
 
     @NotNull
-    @OneToOne
-    @JoinColumn(name = "id")
-    private Plano plano = new Plano();
+    private String plano;
 }

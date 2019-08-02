@@ -86,7 +86,7 @@ public class EmpresaControllerIntegrationTest {
         empresa.setCnpj(novoCnpj);
         String novaRegiao = EmpresaMock.getEmpresaMock().getRegiao();
         empresa.setRegiao(novaRegiao);
-       Plano novoPlano = EmpresaMock.getEmpresaMock().getPlano();
+        String novoPlano = EmpresaMock.getEmpresaMock().getPlano();
         empresa.setPlano(novoPlano);
         String novaSenha = EmpresaMock.getEmpresaMock().getSenha();
         empresa.setSenha(novaSenha);

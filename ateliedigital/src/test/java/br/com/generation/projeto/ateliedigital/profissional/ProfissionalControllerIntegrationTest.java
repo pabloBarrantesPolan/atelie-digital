@@ -85,7 +85,7 @@ public class ProfissionalControllerIntegrationTest {
         profissional.setCpf(novoCpf);
         String novaRegiao = ProfissionalMock.getProfissionalMock().getRegiao();
         profissional.setRegiao(novaRegiao);
-        Plano novoPlano = ProfissionalMock.getProfissionalMock().getPlano();
+        String  novoPlano = ProfissionalMock.getProfissionalMock().getPlano();
         profissional.setPlano(novoPlano);
         String novaSenha = ProfissionalMock.getProfissionalMock().getSenha();
         profissional.setSenha(novaSenha);
