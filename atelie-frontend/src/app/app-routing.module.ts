@@ -16,7 +16,6 @@ import { ProfissionalUpdateComponent } from './profissional/profissional-update/
 import { HomeComponent } from './pages/home/home.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
@@ -54,7 +53,6 @@ const routes: Routes = [
   {path: 'planos/adicionar', component: PlanoCreateComponent},
   {path: 'planos/detalhe/:id', component: PlanoDetailsComponent},
   {path: 'planos/modificar/:id', component: PlanoUpdateComponent},
-  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
   {path: 'lista-profissionais', component: ProfissionalListComponent}
 
 ];

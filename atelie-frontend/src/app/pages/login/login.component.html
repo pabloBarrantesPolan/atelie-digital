@@ -9,11 +9,11 @@
       </div>
 
       <form [formGroup]="loginForm" (ngSubmit)="login()">
-          <input type="text" id="email" class="fadeIn second" name="email" formControlName="email" placeholder="E-mail ou Usuario">
+         <!-- <input type="text" id="email" class="fadeIn second" name="email" formControlName="email" placeholder="E-mail ou Usuario">
           <div *ngIf="formControls.email.errors.required">E-mail Obrigatorio</div>
         <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
             <input type="password" placeholder="Senha" formControlName="senha">
-          </p>
+          </p>-->
             <div *ngIf="formControls.password.errors.required">Senha Obrigatoria</div>
 
       <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
