@@ -16,19 +16,14 @@ import { ProfissionalUpdateComponent } from './profissional/profissional-update/
 import { HomeComponent } from './pages/home/home.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { LoginComponent } from './pages/login/login.component';
-<<<<<<< HEAD
 import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
-
-=======
-import { ContatoComponent } from './pages/contato/contato.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
->>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
 
 
 
@@ -40,10 +35,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contato', component: ContatoComponent},
-<<<<<<< HEAD
   {path: 'usuario', component: UsuarioComponent},
-=======
->>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'encontre', component: EncontreComponent},

@@ -26,15 +26,12 @@ import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { LoginComponent } from './pages/login/login.component';
-<<<<<<< HEAD
 import { AdminComponent } from './pages/admin/admin.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
-=======
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailListComponent } from './pages/contato/email-list/email-list.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
->>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
 
 
 
@@ -64,17 +61,14 @@ import { EmailDetailsComponent } from './pages/contato/email-details/email-detai
     ContatoComponent,
     EncontreComponent,
     LoginComponent,
-<<<<<<< HEAD
     AdminComponent,
     UsuarioComponent,
-   
-=======
+
     AdminLoginComponent,
     AdminHomeComponent,
     EmailListComponent,
     EmailDetailsComponent,
 
->>>>>>> ec86c1edb219392c3cca34ecac82e964bd555656
   ],
   imports: [
     BrowserModule,
