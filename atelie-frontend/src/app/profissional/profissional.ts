@@ -3,10 +3,10 @@ import { Plano } from '../plano/plano';
 export class Profissional {
   id: number;
   nome: string;
-  cep: number;
+  cep: string;
   email: string;
   telefone: number;
-  cpf: number;
+  cpf: string;
   regiao: string;
   senha: string;
   plano: Plano;

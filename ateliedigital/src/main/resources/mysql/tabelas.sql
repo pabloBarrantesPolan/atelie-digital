@@ -32,3 +32,5 @@ create table empresa(
 
 select * from cliente;
 select * from profissional;
+
+create database ateliedigital;

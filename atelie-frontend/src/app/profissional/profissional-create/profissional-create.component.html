@@ -5,7 +5,7 @@
                                 <div class="card-header">Cadastrar</div>
                                 <div class="card-body">
     
-                                    <form class="form-horizontal" method="post" action="#">
+                                    <form (ngSubmit)="onSubmit()" class="form-horizontal" method="post" action="#">
     
                                         <div class="form-group">
                                             <label for="name" class="cols-sm-2 control-label">Seu Nome</label>
@@ -13,7 +13,7 @@
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                                     <input type="text" class="form-control" name="name" id="name"
-                                                    required [(ngModel)]="profissional.nome" placeholder="Seu Nome" />
+                                                    required [(ngModel)]="profissional.nome" placeholder="Exemplo da Silva" />
                                                 </div>
                                             </div>
                                         </div>
@@ -23,7 +23,7 @@
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
                                                     <input type="text" class="form-control" name="email" id="email" 
-                                                    required [(ngModel)]="profissional.email" placeholder="Seu E-mail" />
+                                                    required [(ngModel)]="profissional.email" placeholder="exemplo@gmail.com" />
                                                 </div>
                                             </div>
                                         </div>
@@ -32,7 +32,7 @@
                                             <div class="cols-sm-10">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" name="cep" id="cep" placeholder="Cep"
+                                                    <input type="text" class="form-control" name="cep" id="cep" placeholder="08423256"
                                                     required [(ngModel)]="profissional.cep" />
                                                 </div>
                                             </div>
@@ -42,7 +42,7 @@
                                             <div class="cols-sm-10">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf"
+                                                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="12345678900"
                                                     required [(ngModel)]="profissional.cpf" />
                                                 </div>
                                             </div>
@@ -63,7 +63,8 @@
                                             <div class="cols-sm-10">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                                    <input type="password" class="form-control" name="password" id="password" placeholder="Sua Senha" />
+                                                    <input type="password" class="form-control" name="password" id="password" placeholder="Sua Senha"
+                                                    required [(ngModel)]="profissional.senha" />
                                                 </div>
                                             </div>
                                         </div>
@@ -77,15 +78,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group ">
-                                            <button type="button" class="btn btn-primary btn-lg btn-block login-button">Cadastrar</button>
+                                            <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="newPessoa()">Cadastrar</button>
                                         </div>
+                                        <div [hidden]="!submitted" class="alert alert-success">
+                                                <h4 class="">Enviado com sucesso!</h4>
+                                            
                                         <div class="login-register">
                                             <a href="/login">Login</a>
                                         </div>
-                                    </form>
-                                </div>
     
-                            </div>
-                        </div>
-                    </div>
-    </div>
