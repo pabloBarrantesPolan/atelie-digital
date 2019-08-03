@@ -24,7 +24,7 @@ export class ProfissionalCreateComponent implements OnInit {
   }
 
   seleciona() {
-   
+
 
   }
 
