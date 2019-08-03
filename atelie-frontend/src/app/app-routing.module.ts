@@ -24,6 +24,8 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
+import { DetailsComponent } from './admin/controle-profissionais/details/details.component';
+import { UpdateComponent } from './admin/controle-profissionais/update/update.component';
 
 
 
@@ -32,6 +34,8 @@ const routes: Routes = [
   {path: 'admin', component: AdminLoginComponent},
   {path: 'admin/home', component: AdminHomeComponent},
   {path: 'admin/emails/detalhe/:id', component: EmailDetailsComponent},
+  {path: 'admin/profissionais/modificar/:id', component: UpdateComponent},
+  {path: 'admin/profissionais/detalhe/:id', component: DetailsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contato', component: ContatoComponent},

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Profissional } from 'src/app/profissional/profissional';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProfissionalService } from 'src/app/profissional/profissional.service';
-import { Profissional } from 'src/app/profissional/profissional';
 
 @Component({
-  selector: 'app-profissional-detail',
-  templateUrl: './profissional-detail.component.html',
-  styleUrls: ['./profissional-detail.component.css']
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css']
 })
-export class ProfissionalDetailComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute, private router: Router, private profissionalService: ProfissionalService) { }
+export class DetailsComponent implements OnInit {
 
   id: number;
   profissional: Profissional;
+
+  constructor(private route: ActivatedRoute, private router: Router, private profissionalService: ProfissionalService) { }
 
   ngOnInit() {
     this.profissional = new Profissional();
@@ -25,7 +25,7 @@ export class ProfissionalDetailComponent implements OnInit {
   }
 
   list() {
-    this.router.navigate(['profissionais']);
+    this.router.navigate(['admin/home']);
   }
 
 }

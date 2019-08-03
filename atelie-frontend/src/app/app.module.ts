@@ -32,6 +32,9 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailListComponent } from './pages/contato/email-list/email-list.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
+import { ListComponent } from './admin/controle-profissionais/list/list.component';
+import { DetailsComponent } from './admin/controle-profissionais/details/details.component';
+import { UpdateComponent } from './admin/controle-profissionais/update/update.component';
 
 
 
@@ -68,6 +71,9 @@ import { EmailDetailsComponent } from './pages/contato/email-details/email-detai
     AdminHomeComponent,
     EmailListComponent,
     EmailDetailsComponent,
+    ListComponent,
+    DetailsComponent,
+    UpdateComponent,
 
   ],
   imports: [

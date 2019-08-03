@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Profissional } from '../profissional';
+import { Profissional } from 'src/app/profissional/profissional';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProfissionalService } from '../profissional.service';
+import { ProfissionalService } from 'src/app/profissional/profissional.service';
 import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-profissional-update',
-  templateUrl: './profissional-update.component.html',
-  styleUrls: ['./profissional-update.component.css']
+  selector: 'app-update',
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.css']
 })
-export class ProfissionalUpdateComponent implements OnInit {
+export class UpdateComponent implements OnInit {
 
   prof: Profissional;
   editForm: FormGroup;
