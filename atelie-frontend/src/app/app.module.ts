@@ -26,7 +26,6 @@ import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
 import { LoginComponent } from './pages/login/login.component';
-import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailListComponent } from './pages/contato/email-list/email-list.component';
@@ -63,7 +62,6 @@ import { UpdateComponent } from './admin/controle-profissionais/update/update.co
     ContatoComponent,
     EncontreComponent,
     LoginComponent,
-    UsuarioComponent,
     AdminLoginComponent,
     AdminHomeComponent,
     EmailListComponent,

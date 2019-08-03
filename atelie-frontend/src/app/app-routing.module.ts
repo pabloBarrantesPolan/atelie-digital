@@ -19,7 +19,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
-import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
@@ -38,7 +37,6 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contato', component: ContatoComponent},
-  {path: 'usuario', component: UsuarioComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'encontre', component: EncontreComponent},
