@@ -1,7 +1,7 @@
 
 
 
-<div class="container shadow-lg p-3 mb-5 bg-white rounded my-5">
+<div class="container shadow-lg p-3  mb-5 bg-white rounded my-5">
 <div class="panel panel-primary">
   <div class="panel-heading text-center">
     <h2>Lista de Profissionais</h2>
@@ -14,7 +14,8 @@
             <th>Email:</th>
             <th>Telefone:</th>
             <th>Região:</th>
-            
+            <th>Perfil:</th>
+
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
             <td>{{profissional.email}}</td>
             <td>{{profissional.telefone}}</td>
             <td>{{profissional.regiao}}</td>
+            <td><button (click)="profissionalDetails(profissional.id)" class="btn btn-info btnDetalhe">Ver perfil</button></td>
           </tr>
 
         </tbody>
@@ -32,4 +34,3 @@
 
 </div>
 
- 
