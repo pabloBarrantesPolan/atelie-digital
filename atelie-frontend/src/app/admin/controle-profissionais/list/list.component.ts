@@ -5,12 +5,11 @@ import { ProfissionalService } from 'src/app/profissional/profissional.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profissional-list',
-  templateUrl: './profissional-list.component.html',
-  styleUrls: ['./profissional-list.component.css']
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
 })
-export class ProfissionalListComponent implements OnInit {
-
+export class ListComponent implements OnInit {
 
   profissionais: Observable<Profissional[]>;
 
@@ -32,11 +31,11 @@ export class ProfissionalListComponent implements OnInit {
     );
   }
   profissionalUpdate(id: number) {
-    this.router.navigate(['profissionais/modificar', id]);
+    this.router.navigate(['admin/profissionais/modificar', id]);
   }
 
   profissionalDetails(id: number) {
-    this.router.navigate(['profissionais/detalhe', id]);
+    this.router.navigate(['admin/profissionais/detalhe', id]);
   }
 
 }

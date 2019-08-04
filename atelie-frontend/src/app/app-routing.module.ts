@@ -16,14 +16,14 @@ import { ProfissionalUpdateComponent } from './profissional/profissional-update/
 import { HomeComponent } from './pages/home/home.component';
 import { SobreNosComponent } from './pages/sobre-nos/sobre-nos.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EncontreComponent } from './pages/encontre/encontre.component';
-import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { EmailDetailsComponent } from './pages/contato/email-details/email-details.component';
+import { DetailsComponent } from './admin/controle-profissionais/details/details.component';
+import { UpdateComponent } from './admin/controle-profissionais/update/update.component';
 
 
 
@@ -32,10 +32,11 @@ const routes: Routes = [
   {path: 'admin', component: AdminLoginComponent},
   {path: 'admin/home', component: AdminHomeComponent},
   {path: 'admin/emails/detalhe/:id', component: EmailDetailsComponent},
+  {path: 'admin/profissionais/modificar/:id', component: UpdateComponent},
+  {path: 'admin/profissionais/detalhe/:id', component: DetailsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'contato', component: ContatoComponent},
-  {path: 'usuario', component: UsuarioComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'clientes', component: ClienteListComponent},
   {path: 'encontre', component: EncontreComponent},
@@ -50,7 +51,6 @@ const routes: Routes = [
   {path: 'planos/adicionar', component: PlanoCreateComponent},
   {path: 'planos/detalhe/:id', component: PlanoDetailsComponent},
   {path: 'planos/modificar/:id', component: PlanoUpdateComponent},
-  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
   {path: 'lista-profissionais', component: ProfissionalListComponent}
 
 ];

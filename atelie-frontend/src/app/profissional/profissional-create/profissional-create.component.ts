@@ -24,7 +24,7 @@ export class ProfissionalCreateComponent implements OnInit {
   }
 
   seleciona() {
-   
+
 
   }
 
@@ -51,7 +51,7 @@ export class ProfissionalCreateComponent implements OnInit {
 
   gotoList() {
     setTimeout(() => {
-      this.router.navigate(['/usuario']);
+      this.router.navigate(['profissionais/detalhe/:id']);
     }, 1500);
 
   }
