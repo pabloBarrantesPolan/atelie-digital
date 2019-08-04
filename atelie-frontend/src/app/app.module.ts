@@ -70,6 +70,7 @@ import { UpdateComponent } from './admin/controle-profissionais/update/update.co
     DetailsComponent,
     UpdateComponent,
 
+    
   ],
   imports: [
     BrowserModule,
@@ -77,7 +78,7 @@ import { UpdateComponent } from './admin/controle-profissionais/update/update.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
-
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

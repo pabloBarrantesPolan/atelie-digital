@@ -38,4 +38,8 @@ export class ProfissionalListComponent implements OnInit {
     this.router.navigate(['profissionais/detalhe', id]);
   }
 
+  profissionalfindByRegiao(regiao: string){
+    this.router.navigate(['profissionais/list', String]);
+  }
+
 }
