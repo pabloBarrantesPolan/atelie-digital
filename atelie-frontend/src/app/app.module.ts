@@ -69,6 +69,7 @@ import { EmailDetailsComponent } from './pages/contato/email-details/email-detai
     EmailListComponent,
     EmailDetailsComponent,
 
+    
   ],
   imports: [
     BrowserModule,
@@ -76,7 +77,7 @@ import { EmailDetailsComponent } from './pages/contato/email-details/email-detai
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
-
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
