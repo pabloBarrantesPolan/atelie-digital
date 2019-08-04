@@ -32,7 +32,7 @@ login(){
     return;
   }
   this.authService.login(this.loginForm.value);
-  this.router.navigateByUrl('/usuario');
+  this.router.navigateByUrl('/home');
 }
 
 get formControls() { return this.loginForm.controls; }
