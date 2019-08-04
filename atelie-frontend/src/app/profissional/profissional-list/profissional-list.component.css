@@ -6,6 +6,8 @@ th{
   color: blue;
 }
 
-body{
-  background-image: url(https://arquivo.leonardoconcon.com.br/wp-content/uploads/2012/07/COSTUREIRA.jpg) !important;
+
+
+.card{
+  margin-top: 10%;
 }
