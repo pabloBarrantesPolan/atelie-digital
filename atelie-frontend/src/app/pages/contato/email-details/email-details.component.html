@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h2>Detalhes do E-mail:</h2>
+  <hr>
+  <div class="row" *ngIf="email">
+    <div class="col">
+
+      <div>
+        <label>
+          <strong>Remetente: </strong> {{email.emailRemetente}}
+        </label>
+      </div>
+
+      <div>
+        <label>
+          <strong>Assunto: </strong> {{email.assunto}}
+        </label>
+      </div>
+    </div>
+    <div class="col">
+
+      <div>
+        <label>
+          <strong>Conteúdo: </strong> {{email.conteudo}}
+        </label>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <button (click)="list()" class="btn btn-primary" >Voltar à lista</button>
+      </div>
+    </div>
+  </div>
+

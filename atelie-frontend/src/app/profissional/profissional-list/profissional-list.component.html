@@ -1,16 +1,21 @@
+
+
+
+<div class="container shadow-lg p-3  mb-5 bg-white rounded my-5">
 <div class="panel panel-primary">
-  <div class="panel-heading">
+  <div class="panel-heading text-center">
     <h2>Lista de Profissionais</h2>
   </div>
-  <div class="panel-body">
-    <table class="table table-striped">
+  <div class="panel-body my-3">
+    <table class="table table-striped text-center">
         <thead>
           <tr>
             <th>Nome:</th>
             <th>Email:</th>
             <th>Telefone:</th>
             <th>Região:</th>
-            <th>Ações</th>
+            <th>Perfil:</th>
+
           </tr>
         </thead>
         <tbody>
@@ -19,15 +24,13 @@
             <td>{{profissional.email}}</td>
             <td>{{profissional.telefone}}</td>
             <td>{{profissional.regiao}}</td>
-
-            <td>
-              <button (click)="deleteProfissional(profissional.id)" class="btn btn-danger">Remover</button>
-              <button (click)="profissionalUpdate(profissional.id)" class="btn btn-warning btnDetalhe">Modificar</button>
-              <button (click)="profissionalDetails(profissional.id)" class="btn btn-info btnDetalhe">Detalhes</button>
-            </td>
+            <td><button (click)="profissionalDetails(profissional.id)" class="btn btn-info btnDetalhe">Ver perfil</button></td>
           </tr>
 
         </tbody>
     </table>
   </div>
 </div>
+
+</div>
+

@@ -1,47 +1,7 @@
-<div style="text-align:center">
+<app-navbar></app-navbar>
 
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a routerLink="clientes" routerLinkActive="active" class="nav-link">Lista de clientes</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="clientes/adicionar" routerLinkActive="active" class="nav-link">Adicionar cliente</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="profissionais" routerLinkActive="active" class="nav-link">Lista de profissionais</a>
-      </li>
 
-      <li class="nav-item">
-        <a routerLink="profissionais/adicionar" routerLinkActive="active" class="nav-link">Adicionar profissional</a>
-      </li>
+<router-outlet></router-outlet>
 
-      <li class="nav-item">
-        <a routerLink="empresas" routerLinkActive="active" class="nav-link">Lista de empresas</a>
-      </li>
-      <li class="nav-item">
-          <a routerLink="empresas/adicionar" routerLinkActive="active" class="nav-link">Adicionar empresa</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="planos" routerLinkActive="active" class="nav-link">Lista de planos</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="planos/adicionar" routerLinkActive="active" class="nav-link">Adicionar plano</a>
-          </li>
-    </ul>
-  </nav>
-  <div class="container navContainer">
-      <h2 class="titulo">{{title}}</h2>
-      <hr>
-      <div class="card">
-        <div class="card-body">
-            <router-outlet></router-outlet>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="container">
-          <p class="rodape">AteliêDigital&copy;, Todos os direitos reservados</p>
-      </div>
-    </footer>
 
+<app-footer></app-footer>

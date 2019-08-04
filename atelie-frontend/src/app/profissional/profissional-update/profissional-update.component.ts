@@ -48,7 +48,7 @@ export class ProfissionalUpdateComponent implements OnInit {
       this.profissionalService.updateProfissional(profId, this.editForm.value)
       .pipe(first()).subscribe(
         data => {
-          this.router.navigate(['profissionais']);
+          this.router.navigate(['admin/home']);
         },
         error => {
           alert(error);
