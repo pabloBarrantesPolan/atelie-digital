@@ -51,7 +51,7 @@ export class ProfissionalCreateComponent implements OnInit {
 
   gotoList() {
     setTimeout(() => {
-      this.router.navigate(['profissionais/detalhe/:id']);
+      this.router.navigate(['/profissionais']);
     }, 1500);
 
   }
