@@ -17,7 +17,7 @@
             <div *ngIf="formControls.password.errors.required">Senha Obrigatoria</div>
 
       <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-        <input type="text" id="nome" class="fadeIn second" name="nome" [(ngModel)]="profissional.nome" #username="ngModel" placeholder="E-mail ou Usuario">
+        <input type="text" id="nome" class="fadeIn second" name="nome" [(ngModel)]="profissional.email" #username="ngModel" placeholder="E-mail ou Usuario">
         <div *ngIf="f.submitted && username.invalid">
           <div *ngIf="username.errors.required"><span class="error">Por favor, preencha o campo usuário ou E-mail</span></div>
         </div>
@@ -30,7 +30,7 @@
           </form>
 
       <div id="formFooter">
-        <a class="underlineHover" routerLink="/cadastro">Seja um Profissional</a>
+        <a class="underlineHover" href="/profissionais/adicionar">Seja um Profissional</a>
       </div>
     </form>
     </div>
