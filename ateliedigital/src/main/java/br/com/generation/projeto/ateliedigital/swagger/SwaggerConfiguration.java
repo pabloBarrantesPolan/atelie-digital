@@ -27,10 +27,10 @@ public class SwaggerConfiguration {
 
     private ApiInfo info() {
         return new ApiInfoBuilder().title("API ateliê digital")
-                .description("Projeto integrador.")
-                .contact(new Contact("Vanusa Saravalle",
-                        "www.jorgeferreira.com.br",
-                        "vanusa.sousasaravalle@gmail.com"))
+                .description("Projeto integrador do curso de Fullstack Spring/Angular da Generation Brasil.")
+                .contact(new Contact("Vanusa Saravalle, Pablo Barrantes, Diego Aguiar, Hamilton Toqueville",
+                        "",
+                        "vanusa.sousasaravalle@gmail.com , pablobp.cc@gmail.com"))
                 .license("MIT License")
                 .licenseUrl("https://opensource.org/licenses/MIT")
                 .version("0.0.1")
