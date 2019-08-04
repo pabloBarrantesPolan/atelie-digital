@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="cep" class="cols-sm-2 control-label">Cep</label>
+                                            <label for="cep" class="cols-sm-2 control-label">CEP</label>
                                             <div class="cols-sm-10">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
@@ -38,17 +38,17 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                          <label for="regiao" class="cols-sm-2 control-label">Região</label>
-                                          <div class="cols-sm-10">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                  <input type="text" class="form-control" name="regiao" id="regiao" placeholder="Centro"
-                                                  required [(ngModel)]="profissional.regiao" />
-                                              </div>
-                                          </div>
-                                      </div>
+                                            <label for="regiao" class="cols-sm-2 control-label">Região</label>
+                                            <select class="custom-select" name="regiao" id="regiao" [(ngModel)]="profissional.regiao">
+                                              <option value="Região norte">Região norte</option>
+                                              <option value="Região sul">Região sul</option>
+                                              <option value="Região oeste">Região oeste</option>
+                                              <option value="Região leste">Região leste</option>
+                                              <option value="Região central">Região central</option>
+                                            </select>
+                                        </div>
                                       <div class="form-group">
-                                        <label for="cpf" class="cols-sm-2 control-label">Cpf</label>
+                                        <label for="cpf" class="cols-sm-2 control-label">CPF</label>
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
@@ -69,14 +69,25 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="plano" class="cols-sm-2 control-label">Plano</label>
-                                            <div class="cols-sm-10">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" name="plano" id="plano" placeholder="Plano"
-                                                    required [(ngModel)]="profissional.plano" />
-                                                </div>
-                                            </div>
+                                            <select class="custom-select" name="plano" id="plano" [(ngModel)]="profissional.plano">
+                                              <option value="semestral">Semestral</option>
+                                              <option value="mensal">Mensal</option>
+                                              <option value="trimestral">Trimestral</option>
+                                              <option value="anual">Anual</option>
+                                            </select>
                                         </div>
+                                        <!--
+                                          <div class="form-group">
+                                            <label for="plano" class="cols-sm-2 control-label">Plano</label>
+                                            <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="plano" id="plano" placeholder="Plano"
+                                                required [(ngModel)]="profissional.plano" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        -->
 
                                         <div class="form-group">
                                             <label for="password" class="cols-sm-2 control-label">Senha</label>
