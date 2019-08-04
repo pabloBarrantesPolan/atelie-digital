@@ -1,8 +1,77 @@
+<<<<<<< HEAD
+<div class="jumbotron jumbotron-fluid my-5">
+    <div class="container">
+    <div class="card-deck" >
+           
+              <div class="flip-card-container">
+                <div class="flip-card">
+                  <div class="flip-card-front">
+                    <h2>Plano Mensal</h2> 
+
+                  </div>
+                  <div class="flip-card-back">
+                    <p>30 dias
+                     <span>R$ 30,00 </span>  
+                    </p>            
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="flip-card-container">
+                <div class="flip-card">
+                  <div class="flip-card-front">
+                        <h2>Plano Trimestral</h2> 
+                  </div>
+                  <div class="flip-card-back">
+                        <p> 3 meses
+                         <span>R$ 50,00 </span>  
+                     </p>      
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card-container">
+                  <div class="flip-card">
+                    <div class="flip-card-front">
+                            <h2>Plano Semestral</h2> 
+                    </div>
+                    <div class="flip-card-back">
+                        <p> 6 meses
+                            <span>R$ 75,00 </span>  
+                        </p>     
+                    </div>
+                  </div>
+                </div>
+           
+              <div class="flip-card-container ">
+                <div class="flip-card">
+                  <div class="flip-card-front">
+                        <h2>Plano Anual</h2>
+                  </div>
+                  <div class="flip-card-back">
+                        <p> 1 ano
+                         <span>R$ 75,00 </span>  
+                        </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+<div class="container">
+=======
 <div class="container mt-5 mb-5">
+>>>>>>> 15a4073643bfa10c535cf3906a71bd61202d934a
     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="card">
-                                <div class="card-header">Cadastrar</div>
+                                <div class="card-header" style="background: #0b2438">
+                                    <h1>Cadastrar</h1>
+                                </div>
                                 <div class="card-body">
 
                                     <form (ngSubmit)="onSubmit()" class="form-horizontal" method="post" action="#">
@@ -28,7 +97,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="cep" class="cols-sm-2 control-label">Cep</label>
+                                            <label for="cep" class="cols-sm-2 control-label">CEP</label>
                                             <div class="cols-sm-10">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
@@ -38,17 +107,17 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                          <label for="regiao" class="cols-sm-2 control-label">Região</label>
-                                          <div class="cols-sm-10">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                  <input type="text" class="form-control" name="regiao" id="regiao" placeholder="Centro"
-                                                  required [(ngModel)]="profissional.regiao" />
-                                              </div>
-                                          </div>
-                                      </div>
+                                            <label for="regiao" class="cols-sm-2 control-label">Região</label>
+                                            <select class="custom-select" name="regiao" id="regiao" [(ngModel)]="profissional.regiao">
+                                              <option value="Região norte">Região Norte</option>
+                                              <option value="Região sul">Região Sul</option>
+                                              <option value="Região oeste">Região Oeste</option>
+                                              <option value="Região leste">Região Leste</option>
+                                              <option value="Região central">Região Central</option>
+                                            </select>
+                                        </div>
                                       <div class="form-group">
-                                        <label for="cpf" class="cols-sm-2 control-label">Cpf</label>
+                                        <label for="cpf" class="cols-sm-2 control-label">CPF</label>
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
@@ -69,14 +138,25 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="plano" class="cols-sm-2 control-label">Plano</label>
-                                            <div class="cols-sm-10">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                                    <input type="text" class="form-control" name="plano" id="plano" placeholder="Plano"
-                                                    required [(ngModel)]="profissional.plano" />
-                                                </div>
-                                            </div>
+                                            <select class="custom-select" name="plano" id="plano" [(ngModel)]="profissional.plano">
+                                              <option value="semestral">Semestral</option>
+                                              <option value="mensal">Mensal</option>
+                                              <option value="trimestral">Trimestral</option>
+                                              <option value="anual">Anual</option>
+                                            </select>
                                         </div>
+                                        <!--
+                                          <div class="form-group">
+                                            <label for="plano" class="cols-sm-2 control-label">Plano</label>
+                                            <div class="cols-sm-10">
+                                              <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="plano" id="plano" placeholder="Plano"
+                                                required [(ngModel)]="profissional.plano" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        -->
 
                                         <div class="form-group">
                                             <label for="password" class="cols-sm-2 control-label">Senha</label>
@@ -98,7 +178,9 @@
                                             </div>
                                         </div>
                                         <div class="form-group ">
-                                            <button  type="submit" class="btn btn-success mr-3">Cadastrar</button>
+                                            <button  type="submit" class="btn mr-3"  style="background: #0b2438">
+                                            <h5>Cadastrar</h5>
+                                            </button>
                                         </div>
                                         <div [hidden]="!submitted" class="alert alert-success">
                                                 <h4 class="">Enviado com sucesso!</h4>
