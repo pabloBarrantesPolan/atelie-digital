@@ -1,15 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Profissional } from '../profissional/profissional';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  private profissionalAutenticado: boolean = false;
 
-  public login(userInfo: Profissional){
-    localStorage.setItem('ACCESS_TOKEN', "access_token");
+  constructor(private router: Router) { }
+
+  public login(profissional: Profissional){
+    if (profissional.email === 'admin@admin' && 
+        profissional.senha === 'admin'){
+
+          this.profissionalAutenticado = true;
+          this.router.navigate(['profissionais/detalhe/9']);
+
+
+        } else{
+          this.profissionalAutenticado = false;
+        }
+
+
   }
 
   public isLoggedIn(){

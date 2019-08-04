@@ -1,13 +1,13 @@
-<form>
-  <div class="container">
+<form (ngSubmit)="onSubmit()">
+  <div class="container mt-5">
 
     <div class="form-group">
       <label for="exampleInputEmail1">Usuario:</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="email"  name="usuario" [(ngModel)]="usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="digite o usuario">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Senha:</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" name="senha" [(ngModel)]="senha" class="form-control" id="exampleInputPassword1" placeholder="digite a senha">
     </div>
 
     <button type="submit" (click)="goToAdmin()" class="btn btn-primary">Entrar</button>
