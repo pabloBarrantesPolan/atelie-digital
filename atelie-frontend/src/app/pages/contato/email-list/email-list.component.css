@@ -1,3 +1,7 @@
 button{
   margin: .5%;
 }
+
+.panel h2, th, td {
+  color: #eee;
+}

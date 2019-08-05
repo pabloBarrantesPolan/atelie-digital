@@ -3,6 +3,6 @@ button{
   margin: .5%;
 }
 
-.container td {
-  color: rgb(192, 191, 126);
+.container h2, th, td {
+  color: #eee;
 }
