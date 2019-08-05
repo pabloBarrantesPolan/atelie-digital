@@ -12,11 +12,11 @@ export class AuthService {
   constructor(private router: Router) { }
 
   public login(profissional: Profissional){
-    if (profissional.email === 'admin@admin' && 
+    if (profissional.email === 'admin@admin' &&
         profissional.senha === 'admin'){
 
           this.profissionalAutenticado = true;
-          this.router.navigate(['profissionais/detalhe/9']);
+          this.router.navigate(['admin/home']);
 
 
         } else{

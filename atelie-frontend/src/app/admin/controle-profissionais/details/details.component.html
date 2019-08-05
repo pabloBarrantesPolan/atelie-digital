@@ -1,9 +1,10 @@
-<p>details works!</p>
-<h2>Detalhes do Profissional</h2>
-<hr>
-<div *ngIf="profissional">
-  <div class="row">
-    <div class="col">
+<div class="container my-5">
+
+  <h2>Detalhes do Profissional</h2>
+  <hr>
+  <div *ngIf="profissional">
+    <div class="row">
+      <div class="col">
 
       <div>
         <label>
@@ -16,25 +17,27 @@
         </label>
       </div>
       <div>
-          <label>
-            <strong>Telefone: </strong> {{profissional.telefone}}
-          </label>
-        </div>
+        <label>
+          <strong>Telefone: </strong> {{profissional.telefone}}
+        </label>
       </div>
-      <div class="col">
-        <div>
-            <label>
-              <strong>Região: </strong> {{profissional.regiao}}
-            </label>
-          </div>
-          <div>
-            <label>
-              <strong>Cep: </strong> {{profissional.cep}}
-            </label>
-          </div>
+    </div>
+    <div class="col">
+      <div>
+        <label>
+          <strong>Região: </strong> {{profissional.regiao}}
+        </label>
+      </div>
+      <div>
+        <label>
+          <strong>Cep: </strong> {{profissional.cep}}
+        </label>
+      </div>
     </div>
   </div>
-    <div class="row justify-content-end">
-      <button (click)="list()" class="btn btn-primary mr-3" >Voltar à lista</button>
-    </div>
+  <div class="row justify-content-end">
+    <button (click)="list()" class="btn btn-primary mr-3" >Voltar à lista</button>
+  </div>
+</div>
+
 </div>
